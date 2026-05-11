@@ -9,15 +9,18 @@ asked = []
 score = 0
 
 class Menu:
-    def __init__(self, parent):
+    def __init__(self, rootparent):
         background_color = "#cc3628"
 
         self.parent = parent
         self.original_bg_image = Image.open("engin_akyurt-pizza-2766471_1920.jpg")
         self.bg_photo = ImageTk.PhotoImage(self.original_bg_image)
-        self.bg_label = Label(parent, image=self.bg_photo)
+        self.bg_label = Label(parent, image=self.bg_photo, width=1920,height=300)
         self.bg_label.image = self.bg_photo
         self.bg_label.place(x=0, y=0, relwidth=1, relheight=1)
+
+        self.header = LabelFrame(root,parent, bg="#153c7d" , width=200, height=300, borderwidth=1000, padx=200)
+
 
         self.parent.bind("<Configure>", self.resize_bg)
 
@@ -31,7 +34,7 @@ class Menu:
 
     def resize_bg(self, event):
         if event.widget == self.parent:
-            new_image = self.original_bg_image.resize(width=, height=)
+            new_image = self.original_bg_image.resize((event.width, event.height))
             self.bg_photo = ImageTk.PhotoImage(new_image)
             self.bg_label.config(image=self.bg_photo)
             self.bg_label.image = self.bg_photo
@@ -40,8 +43,8 @@ class Menu:
 if __name__ == "__main__":
         root = tk.Tk()
         root.geometry("1920x1080")
-        root.minsize(1200,800)
-        root.maxsize(1920,1080)
+        root.minsize(1920,1080)
+        root.maxsize(2200,1300)
         root.iconbitmap("Falcon.png")
         root.title("General Knowledge Quiz")
         root.geometry("800x700")  # Optional: fixed starting size
