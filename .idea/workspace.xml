@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc1909a9-29f6-4ce4-a55a-f813f63d8ddb" name="Changes" comment="added pack function and started to adjust size">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="dc1909a9-29f6-4ce4-a55a-f813f63d8ddb" name="Changes" comment="m=adjusted the image to make an header, and added code for label" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -117,13 +114,22 @@
       <option name="project" value="LOCAL" />
       <updated>1778209423739</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="m=adjusted the image to make an header, and added code for label">
+      <option name="closed" value="true" />
+      <created>1778462905227</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1778462905227</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="testing" />
     <MESSAGE value="i added set geometry and min/max size  to window , while started creating base design." />
     <MESSAGE value="added pack function and started to adjust size" />
-    <option name="LAST_COMMIT_MESSAGE" value="added pack function and started to adjust size" />
+    <MESSAGE value="m=adjusted the image to make an header, and added code for label" />
+    <option name="LAST_COMMIT_MESSAGE" value="m=adjusted the image to make an header, and added code for label" />
   </component>
 </project>

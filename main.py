@@ -9,7 +9,7 @@ asked = []
 score = 0
 
 class Menu:
-    def __init__(self, rootparent):
+    def __init__(self, parent):
         background_color = "#cc3628"
 
         self.parent = parent
@@ -19,7 +19,7 @@ class Menu:
         self.bg_label.image = self.bg_photo
         self.bg_label.place(x=0, y=0, relwidth=1, relheight=1)
 
-        self.header = LabelFrame(root,parent, bg="#153c7d" , width=200, height=300, borderwidth=1000, padx=200)
+        self.header = LabelFrame(parent, bg="#153c7d" , width=200, height=300, borderwidth=1000, padx=200)
 
 
         self.parent.bind("<Configure>", self.resize_bg)
