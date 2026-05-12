@@ -8,6 +8,7 @@ name_list = []
 asked = []
 score = 0
 
+
 class Menu:
     def __init__(self, parent):
         background_color = "#cc3628"
