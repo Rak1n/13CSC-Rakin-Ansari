@@ -19,8 +19,8 @@ class Menu:
         self.bg_label.image = self.bg_photo
         self.bg_label.place(x=0, y=0, relwidth=1, relheight=1)
 
-        self.header = LabelFrame(parent, bg="#153c7d" , width=200, height=300, borderwidth=1000, padx=200)
-
+        self.header_frame = Label(parent, bg="#153c7d" , width=1920, height=5, borderwidth=10, padx=5)
+        self.header_frame.place(y=304)
 
         self.parent.bind("<Configure>", self.resize_bg)
 
@@ -42,12 +42,11 @@ class Menu:
 
 if __name__ == "__main__":
         root = tk.Tk()
-        root.geometry("1920x1080")
         root.minsize(1920,1080)
         root.maxsize(2200,1300)
         root.iconbitmap("Falcon.png")
         root.title("General Knowledge Quiz")
         root.geometry("800x700")  # Optional: fixed starting size
         root.configure(bg="#800517")
-        quizStarter_object = Menu(root)
+        Menu_object = Menu(root)
         root.mainloop()
