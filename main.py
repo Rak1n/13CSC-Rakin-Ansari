@@ -13,6 +13,8 @@ class Menu:
         background_color = "#cc3628"
 
         self.parent = parent
+        self.root = root
+        root.wm_attributes('-alpha', 'red')
         self.original_bg_image = Image.open("engin_akyurt-pizza-2766471_1920.jpg")
         self.bg_photo = ImageTk.PhotoImage(self.original_bg_image)
         self.bg_label = Label(parent, image=self.bg_photo, width=1920,height=300)
@@ -24,7 +26,9 @@ class Menu:
 
         self.image2 = Image.open("Falcon.png")
         self.phoneix = ImageTk.PhotoImage(self.image2)
-        self.image_label = Label(parent, image=self.image2, width=200, height = 60)
+        self.image_label = Label(parent, image=self.phoneix, width=200, height = 600, bg="red")
+        self.image_label.image = self.phoneix
+        self.image_label.place(x=11, y=100)
 
         self.parent.bind("<Configure>", self.resize_bg)
 
