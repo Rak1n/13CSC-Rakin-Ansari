@@ -22,6 +22,10 @@ class Menu:
         self.header_frame = Label(parent, bg="#153c7d" , width=1920, height=5, borderwidth=10, padx=5)
         self.header_frame.place(y=304)
 
+        self.image2 = Image.open("Falcon.png")
+        self.phoneix = ImageTk.PhotoImage(self.image2)
+        self.image_label = Label(parent, image=self.image2, width=200, height = 60)
+
         self.parent.bind("<Configure>", self.resize_bg)
 
         self.quiz_frame = Frame(parent, background=background_color)
