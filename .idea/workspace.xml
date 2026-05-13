@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc1909a9-29f6-4ce4-a55a-f813f63d8ddb" name="Changes" comment="m=adjusted the image to make an header, and added code for label">
+    <list default="true" id="dc1909a9-29f6-4ce4-a55a-f813f63d8ddb" name="Changes" comment="added Phoneix logo and tried make image transparent">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -22,12 +22,12 @@
     &quot;assignee&quot;: &quot;Rak1n&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Rak1n/13CSC-Rakin-Ansari.git",
-    "accountId": "1ce8adf9-4ba2-4f0b-a3af-46063ec46795"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Rak1n/13CSC-Rakin-Ansari.git&quot;,
+    &quot;accountId&quot;: &quot;1ce8adf9-4ba2-4f0b-a3af-46063ec46795&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -126,7 +126,23 @@
       <option name="project" value="LOCAL" />
       <updated>1778462905227</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added Phoneix logo and tried make image transparent">
+      <option name="closed" value="true" />
+      <created>1778627313776</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1778627313776</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added Phoneix logo and tried make image transparent">
+      <option name="closed" value="true" />
+      <created>1778627328463</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1778627328463</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -134,6 +150,7 @@
     <MESSAGE value="i added set geometry and min/max size  to window , while started creating base design." />
     <MESSAGE value="added pack function and started to adjust size" />
     <MESSAGE value="m=adjusted the image to make an header, and added code for label" />
-    <option name="LAST_COMMIT_MESSAGE" value="m=adjusted the image to make an header, and added code for label" />
+    <MESSAGE value="added Phoneix logo and tried make image transparent" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Phoneix logo and tried make image transparent" />
   </component>
 </project>
