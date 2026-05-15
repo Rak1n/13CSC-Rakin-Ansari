@@ -2,6 +2,7 @@ from tkinter import *
 import tkinter as tk
 from PIL import Image, ImageTk
 import random
+
 w = 1920
 h = 1080
 name_list = []
@@ -24,11 +25,18 @@ class Menu:
         self.header_frame = Label(parent, bg="#153c7d" , width=1920, height=5, borderwidth=10, padx=5)
         self.header_frame.place(y=304)
 
-        self.image2 = Image.open("Falcon.png")
-        self.phoneix = ImageTk.PhotoImage(self.image2)
-        self.image_label = Label(parent, image=self.phoneix, width=420, height = 410, borderwidth=0, border=0)
-        self.image_label.image = self.phoneix
-        self.image_label.place(x=11, y=100)
+        #self.image2 = Image.open('Falcon.png')
+        #self.phoneix = ImageTk.PhotoImage(self.image2)
+        #self.canvas.create_image(150,150,image=self.phoneix)
+        #self.image_label = Label(parent, image=self.phoneix, width=420, height = 410, borderwidth=0, border=0)
+        #self.image_label.image = self.phoneix
+        #self.image_label.place(x=11, y=100)
+
+
+        # Create button and image
+        self.img = Button(parent, borderwidth=0, width=100)
+        self.img.place(x=11, y=100)
+
 
         self.parent.bind("<Configure>", self.resize_bg)
 
@@ -50,6 +58,8 @@ class Menu:
 
 if __name__ == "__main__":
         root = tk.Tk()
+        root.geometry("400x400")
+
         root.minsize(1920,1080)
         root.maxsize(2200,1300)
         root.iconbitmap("Falcon.png")

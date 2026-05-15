@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc1909a9-29f6-4ce4-a55a-f813f63d8ddb" name="Changes" comment="added Phoneix logo and tried make image transparent">
+    <list default="true" id="dc1909a9-29f6-4ce4-a55a-f813f63d8ddb" name="Changes" comment="added Phoneix logo and tried make image transparent p 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -142,7 +142,15 @@
       <option name="project" value="LOCAL" />
       <updated>1778627328463</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added Phoneix logo and tried make image transparent p 2">
+      <option name="closed" value="true" />
+      <created>1778709334765</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1778709334765</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -151,6 +159,7 @@
     <MESSAGE value="added pack function and started to adjust size" />
     <MESSAGE value="m=adjusted the image to make an header, and added code for label" />
     <MESSAGE value="added Phoneix logo and tried make image transparent" />
-    <option name="LAST_COMMIT_MESSAGE" value="added Phoneix logo and tried make image transparent" />
+    <MESSAGE value="added Phoneix logo and tried make image transparent p 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="added Phoneix logo and tried make image transparent p 2" />
   </component>
 </project>
