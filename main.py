@@ -75,6 +75,7 @@ class Menu:
             self.bg_label.image = self.bg_photo
 
 
+
     def sides(self):
         print("hi")
 
