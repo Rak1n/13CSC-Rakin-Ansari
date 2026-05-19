@@ -41,10 +41,20 @@ class Menu:
         self.img2 = Button(parent, borderwidth=0, width=200, bg="#cc3628", image=self.button2, activebackground="#cc3628",activeforeground="white")
         self.img2.place(x=51, y=600)
 
-        self.button3 = PhotoImage(file='button_specials (5).png')
+        self.button3 = PhotoImage(file='spec.png')
         self.img3 = Button(parent, borderwidth=0, width=200, bg="#cc3628", image=self.button3,
                            activebackground="#cc3628", activeforeground="white")
-        self.img3.place(x=51, y=800)
+        self.img3.place(x=51, y=670)
+
+        self.button4 = PhotoImage(file='button_main.png')
+        self.img4 = Button(parent, borderwidth=0, width=200, bg="#cc3628", image=self.button4,
+                           activebackground="#cc3628", activeforeground="white")
+        self.img4.place(x=51, y=740)
+
+        self.button5 = PhotoImage(file='button_sides.png')
+        self.img5 = Button(parent, borderwidth=0, width=200, bg="#cc3628", image=self.button5,
+                           activebackground="#cc3628", activeforeground="white")
+        self.img5.place(x=51, y=810)
 
         self.parent.bind("<Configure>", self.resize_bg)
 
