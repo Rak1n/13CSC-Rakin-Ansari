@@ -34,27 +34,27 @@ class Menu:
 
         # Create button and image
         self.button = PhotoImage(file='button_menu (1).png')
-        self.img = Button(parent, borderwidth=0, width=200, bg="#cc3628" ,image=self.button,activebackground="#cc3628", activeforeground="white")
-        self.img.place(x=51, y=500)
+        self.img = Label(parent, borderwidth=0, width=200, bg="#cc3628" ,image=self.button,activebackground="#cc3628", activeforeground="white")
+        self.img.place(x=60, y=470)
 
         self.button2 = PhotoImage(file='button_pita.png')
-        self.img2 = Button(parent, borderwidth=0, width=200, bg="#cc3628", image=self.button2, activebackground="#cc3628",activeforeground="white")
-        self.img2.place(x=51, y=600)
+        self.img2 = Button(parent, borderwidth=0, command=self.sides, width=200, bg="#cc3628", image=self.button2, activebackground="#cc3628", activeforeground="white")
+        self.img2.place(x=60, y=540)
 
         self.button3 = PhotoImage(file='spec.png')
         self.img3 = Button(parent, borderwidth=0, width=200, bg="#cc3628", image=self.button3,
                            activebackground="#cc3628", activeforeground="white")
-        self.img3.place(x=51, y=670)
+        self.img3.place(x=60, y=610)
 
         self.button4 = PhotoImage(file='button_main.png')
         self.img4 = Button(parent, borderwidth=0, width=200, bg="#cc3628", image=self.button4,
                            activebackground="#cc3628", activeforeground="white")
-        self.img4.place(x=51, y=740)
+        self.img4.place(x=60, y=680)
 
-        self.button5 = PhotoImage(file='button_sides.png')
+        self.button5 = PhotoImage(file='button_sides (1).png')
         self.img5 = Button(parent, borderwidth=0, width=200, bg="#cc3628", image=self.button5,
                            activebackground="#cc3628", activeforeground="white")
-        self.img5.place(x=51, y=810)
+        self.img5.place(x=61, y=750)
 
         self.parent.bind("<Configure>", self.resize_bg)
 
@@ -65,6 +65,8 @@ class Menu:
         self.content_frame.grid()
         self.bg_label.pack()
 
+        self.info = Label(text="hi")
+
 
     def resize_bg(self, event):
         if event.widget == self.parent:
@@ -73,6 +75,11 @@ class Menu:
             self.bg_label.config(image=self.bg_photo)
             self.bg_label.image = self.bg_photo
 
+
+
+    def sides(self):
+        self.hi = Label( borderwidth=0, width=200, bg="#cc3628", text="hi" )
+        self.hi.place(x=90, y=470)
 
 if __name__ == "__main__":
         root = tk.Tk()
@@ -84,3 +91,4 @@ if __name__ == "__main__":
         root.configure(bg="#800517")
         Menu_object = Menu(root)
         root.mainloop()
+
