@@ -77,7 +77,6 @@ class Menu:
 
 
 
-
     def sides(self):
         self.hi = Label( borderwidth=0, width=200, bg="#cc3628", text="hi" )
         self.hi.place(x=90, y=470)
