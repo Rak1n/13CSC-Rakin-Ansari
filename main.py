@@ -82,6 +82,7 @@ class Menu:
     #pita
     #with shredded chicken, fresh veggies, cheese, and yummy teriyaki sauce.
 
+
     def sides(self):
         self.image9 = PhotoImage(file='button.png')
         self.img9 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image9)
