@@ -67,7 +67,6 @@ class Menu:
 
         self.info = Label(text="hi")
 
-
     def resize_bg(self, event):
         if event.widget == self.parent:
             new_image = self.original_bg_image.resize((event.width, event.height))
@@ -75,10 +74,26 @@ class Menu:
             self.bg_label.config(image=self.bg_photo)
             self.bg_label.image = self.bg_photo
 
+    #Chicken
+    #Pita - Teriyaki
 
+    #Fresh
+    #plain
+    #pita
+    #with shredded chicken, fresh veggies, cheese, and yummy teriyaki sauce.
 
     def sides(self):
-        print("hi")
+        self.image9 = PhotoImage(file='button.png')
+        self.img9 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image9)
+        self.img9.place(x=400, y=400)
+
+        self.image12 = PhotoImage(file='button.png')
+        self.img12 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image12)
+        self.img12.place(x=800, y=400)
+
+        self.image42 = PhotoImage(file='button.png')
+        self.img42 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image42)
+        self.img42.place(x=1200, y=400)
 
 if __name__ == "__main__":
         root = tk.Tk()
@@ -90,5 +105,3 @@ if __name__ == "__main__":
         root.configure(bg="#800517")
         Menu_object = Menu(root)
         root.mainloop()
-
-
