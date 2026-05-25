@@ -1,7 +1,12 @@
 from tkinter import *
+from tkinter.ttk import *
 import tkinter as tk
+import customtkinter
+from tkinter import ttk
 from PIL import Image, ImageTk
 import random
+
+from redis.cluster import command
 
 w = 1920
 h = 1080
@@ -12,7 +17,10 @@ score = 0
 
 class Menu:
     def __init__(self, parent):
+        my_frame = customtkinter.CTkScrollableFrame(root)
+
         background_color = "#cc3628"
+
 
         self.parent = parent
         self.root = root
@@ -38,7 +46,7 @@ class Menu:
         self.img.place(x=60, y=470)
 
         self.button2 = PhotoImage(file='button_pita.png')
-        self.img2 = Button(parent, borderwidth=0, command=self.sides, width=200, bg="#cc3628", image=self.button2, activebackground="#cc3628", activeforeground="white")
+        self.img2 = Button(parent, borderwidth=0, command=self.pita, width=200, bg="#cc3628", image=self.button2, activebackground="#cc3628", activeforeground="white")
         self.img2.place(x=60, y=540)
 
         self.button3 = PhotoImage(file='spec.png')
@@ -52,7 +60,7 @@ class Menu:
         self.img4.place(x=60, y=680)
 
         self.button5 = PhotoImage(file='button_sides (1).png')
-        self.img5 = Button(parent, borderwidth=0, width=200, bg="#cc3628", image=self.button5,
+        self.img5 = Button(parent, borderwidth=0, width=200, command=self.sides,bg="#cc3628", image=self.button5,
                            activebackground="#cc3628", activeforeground="white")
         self.img5.place(x=61, y=750)
 
@@ -82,8 +90,8 @@ class Menu:
     #pita
     #with shredded chicken, fresh veggies, cheese, and yummy teriyaki sauce.
 
-
-    def sides(self):
+    def pita(self):
+        self.sides(command=self.destory)
         self.image9 = PhotoImage(file='button.png')
         self.img9 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image9)
         self.img9.place(x=400, y=400)
@@ -96,6 +104,20 @@ class Menu:
         self.img42 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image42)
         self.img42.place(x=1200, y=400)
 
+    def sides(self):
+        self.image9 = PhotoImage(file='button.png')
+        self.img9 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image9)
+        self.img9.place(x=400, y=400)
+
+        self.image12 = PhotoImage(file='button.png')
+        self.img12 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image12)
+        self.img12.place(x=800, y=400)
+
+        self.image42 = PhotoImage(file='button.png')
+        self.img42 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image42)
+        self.img42.place(x=1500, y=400)
+    def destory(self):
+        self.sides.destroy()
 if __name__ == "__main__":
         root = tk.Tk()
         root.geometry("1920x1080")
