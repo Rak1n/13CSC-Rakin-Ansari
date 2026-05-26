@@ -1,12 +1,9 @@
 from tkinter import *
-from tkinter.ttk import *
 import tkinter as tk
 import customtkinter
 from tkinter import ttk
 from PIL import Image, ImageTk
 import random
-
-from redis.cluster import command
 
 w = 1920
 h = 1080
@@ -17,7 +14,20 @@ score = 0
 
 class Menu:
     def __init__(self, parent):
-        my_frame = customtkinter.CTkScrollableFrame(root)
+       # self.main_frame = tk.Frame(root)
+        #self.main_frame.pack(fill="both", expand=True)
+
+   #     self.my_canvas = tk.Canvas(self.main_frame)
+    #    self.my_canvas.pack(side="left", fill="both", expand=True)
+#
+ #       self.scrollbar = ttk.Scrollbar(self.main_frame, orient="vertical", command=self.my_canvas.yview)
+  #      self.scrollbar.pack(side="right", fill="y")
+
+   #     self.my_canvas.configure(yscrollcommand=self.scrollbar.set)
+    #    self.scrollable_frame = tk.Frame(self.my_canvas)
+     #   self.my_canvas.create_window((0, 0), window=self.scrollable_frame, anchor="nw")
+      #  self. scrollable_frame.bind("<Configure>", lambda e: self.my_canvas.configure(scrollregion=self.my_canvas.bbox("all")))
+        self.my_frame = customtkinter.CTkScrollableFrame(root, width=1920, height=1080)
 
         background_color = "#cc3628"
 
@@ -74,6 +84,7 @@ class Menu:
         self.bg_label.pack()
 
         self.info = Label(text="hi")
+        self.my_frame.pack(pady=0)
 
     def resize_bg(self, event):
         if event.widget == self.parent:
@@ -91,18 +102,17 @@ class Menu:
     #with shredded chicken, fresh veggies, cheese, and yummy teriyaki sauce.
 
     def pita(self):
-        self.sides(command=self.destory)
         self.image9 = PhotoImage(file='button.png')
         self.img9 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image9)
         self.img9.place(x=400, y=400)
 
         self.image12 = PhotoImage(file='button.png')
         self.img12 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image12)
-        self.img12.place(x=800, y=400)
+        self.img12.place(x=800, y=800)
 
         self.image42 = PhotoImage(file='button.png')
         self.img42 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image42)
-        self.img42.place(x=1200, y=400)
+        self.img42.place(x=1200, y=1200)
 
     def sides(self):
         self.image9 = PhotoImage(file='button.png')
@@ -116,13 +126,14 @@ class Menu:
         self.image42 = PhotoImage(file='button.png')
         self.img42 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image42)
         self.img42.place(x=1500, y=400)
-    def destory(self):
-        self.sides.destroy()
+
+
+
 if __name__ == "__main__":
         root = tk.Tk()
         root.geometry("1920x1080")
         root.minsize(1920,1080)
-        root.maxsize(2200,1300)
+        root.maxsize(9999,9999)
         root.iconbitmap("Falcon.png")
         root.title("General Knowledge Quiz")
         root.configure(bg="#800517")
