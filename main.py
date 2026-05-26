@@ -74,6 +74,10 @@ class Menu:
                            activebackground="#cc3628", activeforeground="white")
         self.img5.place(x=61, y=750)
 
+        self.btn_order = PhotoImage(file='button_order (1).png')
+        self.img_order = customtkinter.CTkButton(parent, command=self.sides,image=self.btn_order,)
+        self.img_order.place(x=1070, y=12)
+
         self.parent.bind("<Configure>", self.resize_bg)
 
         self.quiz_frame = Frame(parent, background=background_color)
