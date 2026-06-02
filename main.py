@@ -5,6 +5,9 @@ from tkinter import ttk
 from PIL import Image, ImageTk
 import random
 
+customtkinter.set_appearance_mode("System")
+customtkinter.set_default_color_theme("blue")
+
 w = 1920
 h = 1080
 name_list = []
@@ -30,6 +33,8 @@ class Menu:
         self.my_frame = customtkinter.CTkScrollableFrame(root, width=1920, height=1080)
 
         background_color = "#cc3628"
+
+        root.overrideredirect(True)
 
 
         self.parent = parent
@@ -75,7 +80,7 @@ class Menu:
         self.img5.place(x=61, y=750)
 
         self.btn_order = PhotoImage(file='button_order (1).png')
-        self.img_order = customtkinter.CTkButton(parent, command=self.sides,image=self.btn_order,)
+        self.img_order = customtkinter.CTkButton(parent, command=self.sides,corner_radius=100,height=100,width=100, border_width=0,)
         self.img_order.place(x=1070, y=12)
 
         self.parent.bind("<Configure>", self.resize_bg)
