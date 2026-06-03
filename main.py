@@ -30,7 +30,6 @@ class Menu:
     #    self.scrollable_frame = tk.Frame(self.my_canvas)
      #   self.my_canvas.create_window((0, 0), window=self.scrollable_frame, anchor="nw")
       #  self. scrollable_frame.bind("<Configure>", lambda e: self.my_canvas.configure(scrollregion=self.my_canvas.bbox("all")))
-        self.my_frame = customtkinter.CTkScrollableFrame(root, width=1920, height=1080)
 
         background_color = "#cc3628"
 
@@ -54,7 +53,10 @@ class Menu:
         #self.image_label.image = self.phoneix
         #self.image_label.place(x=11, y=100)
 
-
+        self.text = Label(text="Hi")
+        self.text.place(x=500, y=500)
+        self. text2 = Label(root,text="Mount Roskill Grammar was founded 1953 and began with a roll of 363 students, \n that intial started as a part of an auckland rugby union")
+        self.text2.place(x=600, y=600)
         # Create button and image
         self.button = PhotoImage(file='button_menu (1).png')
         self.img = Label(parent, borderwidth=0, width=200, bg="#cc3628" ,image=self.button,activebackground="#cc3628", activeforeground="white")
@@ -65,12 +67,12 @@ class Menu:
         self.img2.place(x=60, y=540)
 
         self.button3 = PhotoImage(file='spec.png')
-        self.img3 = Button(parent, borderwidth=0, width=200, bg="#cc3628", image=self.button3,
+        self.img3 = Button(parent, borderwidth=0, command=self.specials, width=200, bg="#cc3628", image=self.button3,
                            activebackground="#cc3628", activeforeground="white")
         self.img3.place(x=60, y=610)
 
         self.button4 = PhotoImage(file='button_main.png')
-        self.img4 = Button(parent, borderwidth=0, width=200, bg="#cc3628", image=self.button4,
+        self.img4 = Button(parent, borderwidth=0, command=self.main,width=200, bg="#cc3628", image=self.button4,
                            activebackground="#cc3628", activeforeground="white")
         self.img4.place(x=60, y=680)
 
@@ -93,7 +95,6 @@ class Menu:
         self.bg_label.pack()
 
         self.info = Label(text="hi")
-        self.my_frame.pack(pady=0)
 
     def resize_bg(self, event):
         if event.widget == self.parent:
@@ -123,10 +124,36 @@ class Menu:
         self.img42 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image42)
         self.img42.place(x=1200, y=1200)
 
+    def main(self):
+        self.image9 = PhotoImage(file='button.png')
+        self.img9 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image9)
+        self.img9.place(x=400, y=400)
+
+        self.image12 = PhotoImage(file='button.png')
+        self.img12 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image12)
+        self.img12.place(x=500, y=400)
+
+        self.image42 = PhotoImage(file='button.png')
+        self.img42 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image42)
+        self.img42.place(x=1500, y=400)
+
     def sides(self):
         self.image9 = PhotoImage(file='button.png')
         self.img9 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image9)
         self.img9.place(x=400, y=400)
+
+        self.image12 = PhotoImage(file='button.png')
+        self.img12 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image12)
+        self.img12.place(x=800, y=800)
+
+        self.image42 = PhotoImage(file='button.png')
+        self.img42 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image42)
+        self.img42.place(x=1500, y=400)
+
+    def specials(self):
+        self.image9 = PhotoImage(file='button.png')
+        self.img9 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image9)
+        self.img9.place(x=400, y=800)
 
         self.image12 = PhotoImage(file='button.png')
         self.img12 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image12)
@@ -135,7 +162,6 @@ class Menu:
         self.image42 = PhotoImage(file='button.png')
         self.img42 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image42)
         self.img42.place(x=1500, y=400)
-
 
 
 if __name__ == "__main__":
@@ -148,3 +174,6 @@ if __name__ == "__main__":
         root.configure(bg="#800517")
         Menu_object = Menu(root)
         root.mainloop()
+
+for x in range(9999):
+    customtkinter.CTkScrollableFrame(Menu_object,)
