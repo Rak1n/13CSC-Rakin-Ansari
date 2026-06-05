@@ -53,10 +53,10 @@ class Menu:
         #self.image_label.image = self.phoneix
         #self.image_label.place(x=11, y=100)
 
-        self.text = Label(text="Hi")
-        self.text.place(x=500, y=500)
-        self. text2 = Label(root,text="Mount Roskill Grammar was founded 1953 and began with a roll of 363 students, \n that intial started as a part of an auckland rugby union")
-        self.text2.place(x=600, y=600)
+        self.text = Label(text="Mount Roskill Grammar", font=("arial",30,"underline","bold"),bg="#cc3628",)
+        self.text.place(x=870, y=500)
+        self. text2 = Label(root, font=("arial",20), bg="#cc3628",text="Mount Roskill Grammar was founded 1953 and began with a roll of 363 students, \n that intial started as a part of an auckland rugby union")
+        self.text2.place(x=600, y=560)
         # Create button and image
         self.button = PhotoImage(file='button_menu (1).png')
         self.img = Label(parent, borderwidth=0, width=200, bg="#cc3628" ,image=self.button,activebackground="#cc3628", activeforeground="white")
@@ -112,6 +112,8 @@ class Menu:
     #with shredded chicken, fresh veggies, cheese, and yummy teriyaki sauce.
 
     def pita(self):
+        self.background = Label(width=200, height=200, bg="#cc3628")
+        self.background.place(x=600,y=500)
         self.image9 = PhotoImage(file='button.png')
         self.img9 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image9)
         self.img9.place(x=400, y=400)
@@ -168,7 +170,7 @@ if __name__ == "__main__":
         root = tk.Tk()
         root.geometry("1920x1080")
         root.minsize(1920,1080)
-        root.maxsize(9999,9999)
+        root.maxsize(1920,1080)
         root.iconbitmap("Falcon.png")
         root.title("General Knowledge Quiz")
         root.configure(bg="#800517")
