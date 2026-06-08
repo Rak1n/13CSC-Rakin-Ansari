@@ -46,6 +46,9 @@ class Menu:
 
 
 
+
+        self.bar = Label(width=1080, height=4, bg="#153c7d")
+        self.bar.place(x=0,y=0)
         #self.image2 = Image.open('Falcon.png')
         #self.phoneix = ImageTk.PhotoImage(self.image2)
         #self.canvas.create_image(150,150,image=self.phoneix)
@@ -82,8 +85,8 @@ class Menu:
         self.img5.place(x=61, y=750)
 
         self.btn_order = PhotoImage(file='button_order (1).png')
-        self.img_order = customtkinter.CTkButton(parent, command=self.sides,corner_radius=100,height=100,width=100, border_width=0,)
-        self.img_order.place(x=1070, y=12)
+        self.img_order = customtkinter.CTkButton(parent, fg_color=("black"), command=self.sides,corner_radius=100,height=65,width=10, border_width=3, bg_color="#153c7d")
+        self.img_order.place(x=1070, y=0)
 
         self.parent.bind("<Configure>", self.resize_bg)
 
@@ -93,6 +96,7 @@ class Menu:
         self.content_frame = Frame(self.quiz_frame, background=background_color)
         self.content_frame.grid()
         self.bg_label.pack()
+
 
         self.info = Label(text="hi")
 

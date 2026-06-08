@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc1909a9-29f6-4ce4-a55a-f813f63d8ddb" name="Changes" comment="akiugn and added all side bar buttons, and started to make def function to make the menu pop up">
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="dc1909a9-29f6-4ce4-a55a-f813f63d8ddb" name="Changes" comment="adjusted text font, and added cover up" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -207,7 +205,15 @@
       <option name="project" value="LOCAL" />
       <updated>1779231959244</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="adjusted text font, and added cover up">
+      <option name="closed" value="true" />
+      <created>1780628552017</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1780628552017</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -230,6 +236,7 @@
     <MESSAGE value="added Phoneix logo and tried make image transparent p 2" />
     <MESSAGE value="added side menu buttons" />
     <MESSAGE value="akiugn and added all side bar buttons, and started to make def function to make the menu pop up" />
-    <option name="LAST_COMMIT_MESSAGE" value="akiugn and added all side bar buttons, and started to make def function to make the menu pop up" />
+    <MESSAGE value="adjusted text font, and added cover up" />
+    <option name="LAST_COMMIT_MESSAGE" value="adjusted text font, and added cover up" />
   </component>
 </project>
