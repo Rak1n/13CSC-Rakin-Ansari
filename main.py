@@ -20,6 +20,14 @@ is_clicked = False
 
 class Menu:
     def __init__(self, parent):
+        self.parent = parent
+        self.root = root
+        self.scrollable_frame = customtkinter.CTkScrollableFrame(
+            self.parent,
+            width=1920,
+            height=1080
+        )
+        self.scrollable_frame.pack(fill="both", expand=True)
        # self.main_frame = tk.Frame(root)
         #self.main_frame.pack(fill="both", expand=True)
 
@@ -39,18 +47,16 @@ class Menu:
         root.overrideredirect(True)
 
 
-        self.parent = parent
-        self.root = root
         self.original_bg_image = Image.open("Screenshot 2026-05-18 124046.png")
         self.bg_photo = ImageTk.PhotoImage(self.original_bg_image)
-        self.bg_label = Label(parent, image=self.bg_photo)
+        self.bg_label = Label(self.scrollable_frame, image=self.bg_photo)
         self.bg_label.image = self.bg_photo
         self.bg_label.place(x=0, y=0, relwidth=1, relheight=1)
 
 
 
 
-        self.bar = Label(width=1080, height=4, bg="#153c7d")
+        self.bar = Label(self.scrollable_frame,width=1080, height=4, bg="#153c7d")
         self.bar.place(x=0,y=0)
         #self.image2 = Image.open('Falcon.png')
         #self.phoneix = ImageTk.PhotoImage(self.image2)
@@ -59,41 +65,41 @@ class Menu:
         #self.image_label.image = self.phoneix
         #self.image_label.place(x=11, y=100)
 
-        self.text = Label(text="Mount Roskill Grammar", font=("arial",30,"underline","bold"),bg="#cc3628",)
+        self.text = Label(self.scrollable_frame,text="Mount Roskill Grammar", font=("arial",30,"underline","bold"),bg="#cc3628",)
         self.text.place(x=870, y=500)
-        self. text2 = Label(root, font=("arial",20), bg="#cc3628",text="Mount Roskill Grammar was founded 1953 and began with a roll of 363 students, \n that intial started as a part of an auckland rugby union")
+        self. text2 = Label(self.scrollable_frame, font=("arial",20), bg="#cc3628",text="Mount Roskill Grammar was founded 1953 and began with a roll of 363 students, \n that intial started as a part of an auckland rugby union")
         self.text2.place(x=600, y=560)
         # Create button and image
         self.button = PhotoImage(file='button_menu (1).png')
-        self.img = Label(parent, borderwidth=0, width=200, bg="#cc3628" ,image=self.button,activebackground="#cc3628", activeforeground="white")
+        self.img = Label(self.scrollable_frame, borderwidth=0, width=200, bg="#cc3628" ,image=self.button,activebackground="#cc3628", activeforeground="white")
         self.img.place(x=60, y=470)
 
         self.button2 = PhotoImage(file='button_pita.png')
-        self.img2 = Button(parent, borderwidth=0, command=self.pita, width=200, bg="#cc3628", image=self.button2, activebackground="#cc3628", activeforeground="white")
+        self.img2 = Button(self.scrollable_frame, borderwidth=0, command=self.pita, width=200, bg="#cc3628", image=self.button2, activebackground="#cc3628", activeforeground="white")
         self.img2.place(x=60, y=540)
 
         self.button3 = PhotoImage(file='spec.png')
-        self.img3 = Button(parent, borderwidth=0, command=self.specials, width=200, bg="#cc3628", image=self.button3,
+        self.img3 = Button(self.scrollable_frame, borderwidth=0, command=self.specials, width=200, bg="#cc3628", image=self.button3,
                            activebackground="#cc3628", activeforeground="white")
         self.img3.place(x=60, y=610)
 
         self.button4 = PhotoImage(file='button_main.png')
-        self.img4 = Button(parent, borderwidth=0, command=self.main,width=200, bg="#cc3628", image=self.button4,
+        self.img4 = Button(self.scrollable_frame, borderwidth=0, command=self.main,width=200, bg="#cc3628", image=self.button4,
                            activebackground="#cc3628", activeforeground="white")
         self.img4.place(x=60, y=680)
 
         self.button5 = PhotoImage(file='button_sides (1).png')
-        self.img5 = Button(parent, borderwidth=0, width=200, command=self.sides,bg="#cc3628", image=self.button5,
+        self.img5 = Button(self.scrollable_frame, borderwidth=0, width=200, command=self.sides,bg="#cc3628", image=self.button5,
                            activebackground="#cc3628", activeforeground="white")
         self.img5.place(x=61, y=750)
 
         self.btn_order = PhotoImage(file='button_order (1).png')
-        self.img_order = customtkinter.CTkButton(parent, fg_color=("black"), command=self.trueflase(),corner_radius=100,height=65,width=10, border_width=3, bg_color="#153c7d")
+        self.img_order = customtkinter.CTkButton(self.scrollable_frame, fg_color=("black"), command=self.order,corner_radius=100,height=65,width=10, border_width=3, bg_color="#153c7d")
         self.img_order.place(x=1070, y=0)
 
         self.parent.bind("<Configure>", self.resize_bg)
 
-        self.quiz_frame = Frame(parent, background=background_color)
+        self.quiz_frame = Frame(self.scrollable_frame, background=background_color)
         self.quiz_frame.place(relx=0.5, rely=0.5, anchor=CENTER)
 
         self.content_frame = Frame(self.quiz_frame, background=background_color)
@@ -121,72 +127,99 @@ class Menu:
     def trueflase(self):
         global is_clicked
         is_clicked = True
-    def order(self):
-        if is_clicked:
-            self.screen = Label(width=1080, height=1920, bg="black",)
-            self.screen.place(x=0, y=0)
-            set_opacity(self.screen, 0.5)
-        self.trueflase()
 
+    def order(self):
+        # close previous overlay if it exists
+        try:
+            self.overlay.destroy()
+        except:
+            pass
+
+        self.overlay = tk.Toplevel(self.parent)
+        self.overlay.attributes("-fullscreen", True)
+        self.overlay.attributes("-alpha", 0.5)
+        self.overlay.configure(bg="black")
+        self.order_menu = Label(height=1080, width=50)
+        self.order_menu.place(x=1660,y=0)
+
+        self.overlay.lift()
+        self.overlay.grab_set()
+
+        self.overlay.bind("<Button-1>", self.close_overlay)
+
+    def close_overlay(self, event=None):
+        if hasattr(self, "overlay"):
+            self.overlay.destroy()
+            self.order_menu.destroy()
     def pita(self):
-        self.background = Label(width=200, height=200, bg="#cc3628")
+        self.background = Label(self.scrollable_frame,width=200, height=200, bg="#cc3628")
         self.background.place(x=600,y=500)
         self.image9 = PhotoImage(file='button.png')
-        self.img9 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image9)
+        self.img9 = Label(self.scrollable_frame,borderwidth=100, width=200, bg="#cc3628", image=self.image9)
         self.img9.place(x=400, y=400)
 
         self.image12 = PhotoImage(file='button.png')
-        self.img12 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image12)
+        self.img12 = Label(self.scrollable_frame,borderwidth=100, width=200, bg="#cc3628", image=self.image12)
         self.img12.place(x=800, y=800)
 
         self.image42 = PhotoImage(file='button.png')
-        self.img42 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image42)
+        self.img42 = Label(self.scrollable_frame,borderwidth=100, width=200, bg="#cc3628", image=self.image42)
         self.img42.place(x=1200, y=1200)
 
     def main(self):
+        self.background = Label(self.scrollable_frame,width=200, height=200, bg="#cc3628")
+        self.background.place(x=600,y=500)
+
         self.image9 = PhotoImage(file='button.png')
-        self.img9 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image9)
+        self.img9 = Label(self.scrollable_frame,borderwidth=100, width=200, bg="#cc3628", image=self.image9)
         self.img9.place(x=400, y=400)
 
         self.image12 = PhotoImage(file='button.png')
-        self.img12 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image12)
+        self.img12 = Label(self.scrollable_frame,borderwidth=100, width=200, bg="#cc3628", image=self.image12)
         self.img12.place(x=500, y=400)
 
         self.image42 = PhotoImage(file='button.png')
-        self.img42 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image42)
-        self.img42.place(x=1500, y=400)
+        self.img42 = Label(self.scrollable_frame,borderwidth=100, width=200, bg="#cc3628", image=self.image42)
+        self.img42.place(x=700, y=400)
 
     def sides(self):
+        self.background = Label(self.scrollable_frame,width=200, height=200, bg="#cc3628")
+        self.background.place(x=600,y=500)
+
+
         self.image9 = PhotoImage(file='button.png')
-        self.img9 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image9)
+        self.img9 = Label(self.scrollable_frame,borderwidth=100, width=200, bg="#cc3628", image=self.image9)
         self.img9.place(x=400, y=400)
 
         self.image12 = PhotoImage(file='button.png')
-        self.img12 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image12)
+        self.img12 = Label(self.scrollable_frame,borderwidth=100, width=200, bg="#cc3628", image=self.image12)
         self.img12.place(x=800, y=800)
 
         self.image42 = PhotoImage(file='button.png')
-        self.img42 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image42)
+        self.img42 = Label(self.scrollable_frame,borderwidth=100, width=200, bg="#cc3628", image=self.image42)
         self.img42.place(x=1500, y=400)
 
     def specials(self):
+        self.background = Label(self.scrollable_frame,width=200, height=200, bg="#cc3628")
+        self.background.place(x=600,y=500)
+
         self.image9 = PhotoImage(file='button.png')
-        self.img9 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image9)
+        self.img9 = Label(self.scrollable_frame,borderwidth=100, width=200, bg="#cc3628", image=self.image9)
         self.img9.place(x=400, y=800)
 
         self.image12 = PhotoImage(file='button.png')
-        self.img12 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image12)
+        self.img12 = Label(self.scrollable_frame,borderwidth=100, width=200, bg="#cc3628", image=self.image12)
         self.img12.place(x=800, y=400)
 
         self.image42 = PhotoImage(file='button.png')
-        self.img42 = Label(borderwidth=100, width=200, bg="#cc3628", image=self.image42)
+        self.img42 = Label(self.scrollable_frame,borderwidth=100, width=200, bg="#cc3628", image=self.image42)
         self.img42.place(x=1500, y=400)
 
 
 if __name__ == "__main__":
         root = tk.Tk()
         root.geometry("1920x1080")
-        root.minsize(1920,1080)
+        root.minsize(10,10)
         root.maxsize(1920,1080)
         root.iconbitmap("Falcon.png")
         root.title("General Knowledge Quiz")
