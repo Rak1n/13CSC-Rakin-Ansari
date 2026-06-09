@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc1909a9-29f6-4ce4-a55a-f813f63d8ddb" name="Changes" comment="adjusted text font, and added cover up">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="dc1909a9-29f6-4ce4-a55a-f813f63d8ddb" name="Changes" comment="added ordering page overlay and added scroll frame" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -216,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780628552017</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="added ordering page overlay and added scroll frame">
+      <option name="closed" value="true" />
+      <created>1781046464028</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1781046464028</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -240,6 +245,7 @@
     <MESSAGE value="added side menu buttons" />
     <MESSAGE value="akiugn and added all side bar buttons, and started to make def function to make the menu pop up" />
     <MESSAGE value="adjusted text font, and added cover up" />
-    <option name="LAST_COMMIT_MESSAGE" value="adjusted text font, and added cover up" />
+    <MESSAGE value="added ordering page overlay and added scroll frame" />
+    <option name="LAST_COMMIT_MESSAGE" value="added ordering page overlay and added scroll frame" />
   </component>
 </project>
