@@ -5,6 +5,8 @@ from tkinter import ttk
 from PIL import Image, ImageTk
 import random
 
+from pywinstyles import set_opacity
+
 customtkinter.set_appearance_mode("System")
 customtkinter.set_default_color_theme("blue")
 
@@ -13,6 +15,7 @@ h = 1080
 name_list = []
 asked = []
 score = 0
+is_clicked = False
 
 
 class Menu:
@@ -85,7 +88,7 @@ class Menu:
         self.img5.place(x=61, y=750)
 
         self.btn_order = PhotoImage(file='button_order (1).png')
-        self.img_order = customtkinter.CTkButton(parent, fg_color=("black"), command=self.sides,corner_radius=100,height=65,width=10, border_width=3, bg_color="#153c7d")
+        self.img_order = customtkinter.CTkButton(parent, fg_color=("black"), command=self.trueflase(),corner_radius=100,height=65,width=10, border_width=3, bg_color="#153c7d")
         self.img_order.place(x=1070, y=0)
 
         self.parent.bind("<Configure>", self.resize_bg)
@@ -110,10 +113,20 @@ class Menu:
     #Chicken
     #Pita - Teriyaki
 
+
     #Fresh
     #plain
     #pita
     #with shredded chicken, fresh veggies, cheese, and yummy teriyaki sauce.
+    def trueflase(self):
+        global is_clicked
+        is_clicked = True
+    def order(self):
+        if is_clicked:
+            self.screen = Label(width=1080, height=1920, bg="black",)
+            self.screen.place(x=0, y=0)
+            set_opacity(self.screen, 0.5)
+        self.trueflase()
 
     def pita(self):
         self.background = Label(width=200, height=200, bg="#cc3628")

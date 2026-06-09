@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc1909a9-29f6-4ce4-a55a-f813f63d8ddb" name="Changes" comment="adjusted text font, and added cover up" />
+    <list default="true" id="dc1909a9-29f6-4ce4-a55a-f813f63d8ddb" name="Changes" comment="adjusted text font, and added cover up">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,12 +22,12 @@
     &quot;assignee&quot;: &quot;Rak1n&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Rak1n/13CSC-Rakin-Ansari.git&quot;,
-    &quot;accountId&quot;: &quot;1ce8adf9-4ba2-4f0b-a3af-46063ec46795&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Rak1n/13CSC-Rakin-Ansari.git",
+    "accountId": "a660207e-7375-4aee-b55b-a6f289398cd7"
   }
-}</component>
+}]]></component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
