@@ -128,8 +128,9 @@ class Menu:
         global is_clicked
         is_clicked = True
 
+    is_clicked = True
+
     def order(self):
-        # close previous overlay if it exists
         try:
             self.overlay.destroy()
         except:
@@ -139,18 +140,45 @@ class Menu:
         self.overlay.attributes("-fullscreen", True)
         self.overlay.attributes("-alpha", 0.5)
         self.overlay.configure(bg="black")
-        self.order_menu = Label(height=1080, width=50)
-        self.order_menu.place(x=1660,y=0)
+
+
+        # RIGHT SIDE MENU PANEL
+        self.order_menu = Frame(
+            self.overlay,
+            width=300,
+            height=1080,
+            bg="white"
+        )
+        self.order_menu.place(x=1620, y=0)
 
         self.overlay.lift()
         self.overlay.grab_set()
 
         self.overlay.bind("<Button-1>", self.close_overlay)
 
-    def close_overlay(self, event=None):
-        if hasattr(self, "overlay"):
+        self.order_menu.bind("<Button-1>", lambda e: "break")
+
+    def close_overlay(self, event):
+        if not hasattr(self, "order_menu"):
+            return
+
+        x = event.x_root
+        y = event.y_root
+
+        menu_x = self.order_menu.winfo_rootx()
+        menu_y = self.order_menu.winfo_rooty()
+        menu_w = self.order_menu.winfo_width()
+        menu_h = self.order_menu.winfo_height()
+
+        inside_menu = (
+                menu_x <= x <= menu_x + menu_w and
+                menu_y <= y <= menu_y + menu_h
+        )
+
+        if not inside_menu:
             self.overlay.destroy()
-            self.order_menu.destroy()
+            self.overlay.destroy()
+
     def pita(self):
         self.background = Label(self.scrollable_frame,width=200, height=200, bg="#cc3628")
         self.background.place(x=600,y=500)

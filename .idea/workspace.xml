@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc1909a9-29f6-4ce4-a55a-f813f63d8ddb" name="Changes" comment="added ordering page overlay and added scroll frame" />
+    <list default="true" id="dc1909a9-29f6-4ce4-a55a-f813f63d8ddb" name="Changes" comment="added ordering page overlay and added scroll frame">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,12 +22,12 @@
     &quot;assignee&quot;: &quot;Rak1n&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Rak1n/13CSC-Rakin-Ansari.git",
-    "accountId": "6ba460cd-c4c3-4703-904e-d8705171e1bb"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Rak1n/13CSC-Rakin-Ansari.git&quot;,
+    &quot;accountId&quot;: &quot;6ba460cd-c4c3-4703-904e-d8705171e1bb&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -221,7 +224,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781046464028</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="added ordering page overlay and added scroll frame">
+      <option name="closed" value="true" />
+      <created>1781046503638</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1781046503638</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
