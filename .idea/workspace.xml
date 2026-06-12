@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc1909a9-29f6-4ce4-a55a-f813f63d8ddb" name="Changes" comment="added ordering page overlay and added scroll frame">
+    <list default="true" id="dc1909a9-29f6-4ce4-a55a-f813f63d8ddb" name="Changes" comment="added deadzone in order page overlay">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -232,7 +232,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781046503638</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="added deadzone in order page overlay">
+      <option name="closed" value="true" />
+      <created>1781128320588</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1781128320588</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -257,6 +265,7 @@
     <MESSAGE value="akiugn and added all side bar buttons, and started to make def function to make the menu pop up" />
     <MESSAGE value="adjusted text font, and added cover up" />
     <MESSAGE value="added ordering page overlay and added scroll frame" />
-    <option name="LAST_COMMIT_MESSAGE" value="added ordering page overlay and added scroll frame" />
+    <MESSAGE value="added deadzone in order page overlay" />
+    <option name="LAST_COMMIT_MESSAGE" value="added deadzone in order page overlay" />
   </component>
 </project>

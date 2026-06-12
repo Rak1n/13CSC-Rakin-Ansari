@@ -141,7 +141,6 @@ class Menu:
         self.overlay.attributes("-alpha", 0.5)
         self.overlay.configure(bg="black")
 
-
         # RIGHT SIDE MENU PANEL
         self.order_menu = Frame(
             self.overlay,
@@ -154,8 +153,10 @@ class Menu:
         self.overlay.lift()
         self.overlay.grab_set()
 
+        # ONLY overlay background closes it
         self.overlay.bind("<Button-1>", self.close_overlay)
 
+        # IMPORTANT: stop clicks inside menu from bubbling
         self.order_menu.bind("<Button-1>", lambda e: "break")
 
     def close_overlay(self, event):
