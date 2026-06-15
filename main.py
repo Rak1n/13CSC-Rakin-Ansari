@@ -2,6 +2,8 @@ from tkinter import *
 import tkinter as tk
 import customtkinter
 from tkinter import ttk
+
+import pywinstyles
 from PIL import Image, ImageTk
 import random
 
@@ -141,22 +143,20 @@ class Menu:
         self.overlay.attributes("-alpha", 0.5)
         self.overlay.configure(bg="black")
 
-        # RIGHT SIDE MENU PANEL
-        self.order_menu = Frame(
+        self.order_menu = tk.Frame(
             self.overlay,
             width=300,
             height=1080,
             bg="white"
         )
+        pywinstyles.set_opacity(self.order_menu, value=9999)
         self.order_menu.place(x=1620, y=0)
 
         self.overlay.lift()
         self.overlay.grab_set()
 
-        # ONLY overlay background closes it
         self.overlay.bind("<Button-1>", self.close_overlay)
 
-        # IMPORTANT: stop clicks inside menu from bubbling
         self.order_menu.bind("<Button-1>", lambda e: "break")
 
     def close_overlay(self, event):

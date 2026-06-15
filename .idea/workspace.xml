@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dc1909a9-29f6-4ce4-a55a-f813f63d8ddb" name="Changes" comment="added deadzone in order page overlay">
+    <list default="true" id="dc1909a9-29f6-4ce4-a55a-f813f63d8ddb" name="Changes" comment="added deadzone in order page overlay pt 2">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
@@ -240,7 +240,15 @@
       <option name="project" value="LOCAL" />
       <updated>1781128320588</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="added deadzone in order page overlay pt 2">
+      <option name="closed" value="true" />
+      <created>1781233237493</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1781233237493</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -266,6 +274,7 @@
     <MESSAGE value="adjusted text font, and added cover up" />
     <MESSAGE value="added ordering page overlay and added scroll frame" />
     <MESSAGE value="added deadzone in order page overlay" />
-    <option name="LAST_COMMIT_MESSAGE" value="added deadzone in order page overlay" />
+    <MESSAGE value="added deadzone in order page overlay pt 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="added deadzone in order page overlay pt 2" />
   </component>
 </project>
