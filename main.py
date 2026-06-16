@@ -46,7 +46,6 @@ class Menu:
 
         background_color = "#cc3628"
 
-        root.overrideredirect(True)
 
 
         self.original_bg_image = Image.open("Screenshot 2026-05-18 124046.png")
@@ -257,4 +256,4 @@ if __name__ == "__main__":
         root.mainloop()
 
 for x in range(9999):
-    customtkinter.CTkScrollableFrame(Menu_object,)
+    customtkinter.CTkScrollableFrame(Menu)
