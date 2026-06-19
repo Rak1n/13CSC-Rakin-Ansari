@@ -139,16 +139,20 @@ class Menu:
 
         self.overlay = tk.Toplevel(self.parent)
         self.overlay.attributes("-fullscreen", True)
-        self.overlay.attributes("-alpha", 0.5)
+        pywinstyles.set_opacity(self.overlay, value= 0.5)
+
         self.overlay.configure(bg="black")
 
         self.order_menu = tk.Frame(
             self.overlay,
             width=300,
             height=1080,
-            bg="white"
+            bg="blue"
+
         )
         pywinstyles.set_opacity(self.order_menu, value=9999)
+
+
         self.order_menu.place(x=1620, y=0)
 
         self.overlay.lift()
