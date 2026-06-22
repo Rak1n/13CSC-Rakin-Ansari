@@ -6,7 +6,6 @@ from tkinter import ttk
 import pywinstyles
 from PIL import Image, ImageTk
 import random
-
 from pywinstyles import set_opacity
 
 customtkinter.set_appearance_mode("System")
@@ -138,19 +137,20 @@ class Menu:
             pass
 
         self.overlay = tk.Toplevel(self.parent)
-        self.overlay.attributes("-fullscreen", True)
-        pywinstyles.set_opacity(self.overlay, value= 0.5)
 
+        self.overlay.attributes("-fullscreen", True)
+        self.overlay.attributes("-alpha", 0.5)
         self.overlay.configure(bg="black")
 
         self.order_menu = tk.Frame(
             self.overlay,
+            self.overlay.attributes("-alpha", 5),
             width=300,
             height=1080,
             bg="blue"
 
         )
-        pywinstyles.set_opacity(self.order_menu, value=9999)
+
 
 
         self.order_menu.place(x=1620, y=0)
@@ -178,6 +178,8 @@ class Menu:
                 menu_x <= x <= menu_x + menu_w and
                 menu_y <= y <= menu_y + menu_h
         )
+        pywinstyles.set_opacity(self.overlay, value=0.5)
+
 
         if not inside_menu:
             self.overlay.destroy()
