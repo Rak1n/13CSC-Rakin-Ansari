@@ -5,6 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dc1909a9-29f6-4ce4-a55a-f813f63d8ddb" name="Changes" comment="added deadzone in order page overlay pt 3">
+      <change beforePath="$PROJECT_DIR$/.idea/13CSC-Rakin-Ansari.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/13CSC-Rakin-Ansari.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -24,7 +27,7 @@
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/Rak1n/13CSC-Rakin-Ansari.git&quot;,
-    &quot;accountId&quot;: &quot;6ba460cd-c4c3-4703-904e-d8705171e1bb&quot;
+    &quot;accountId&quot;: &quot;feb26019-ed41-4edb-bda3-b7d457af7563&quot;
   }
 }</component>
   <component name="ProblemsViewState">
@@ -69,8 +72,9 @@
         <env name="7z x .../libclang-release_100-windows-vs2015_64-clazy.7z SET LLVM_INSTALL_DIR" value="%CD%\libclang" />
       </envs>
       <option name="SDK_HOME" value="" />
+      <option name="SDK_NAME" value="Python 3.14 (git.exe)" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
@@ -290,8 +294,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>156</line>
+          <line>151</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/main.py</url>
+          <line>214</line>
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

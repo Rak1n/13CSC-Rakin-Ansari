@@ -27,25 +27,20 @@ class Menu:
 
 
 
-        self.scrollable_frame = customtkinter.CTkScrollableFrame(
-            self.parent,
-            width=1920,
-            height=1080
-        )
-        self.scrollable_frame.pack(fill="both", expand=True)
-       # self.main_frame = tk.Frame(root)
-        #self.main_frame.pack(fill="both", expand=True)
 
-   #     self.my_canvas = tk.Canvas(self.main_frame)
-    #    self.my_canvas.pack(side="left", fill="both", expand=True)
-#
- #       self.scrollbar = ttk.Scrollbar(self.main_frame, orient="vertical", command=self.my_canvas.yview)
-  #      self.scrollbar.pack(side="right", fill="y")
+        self.main_frame = tk.Frame(root)
+        self.main_frame.pack(fill="both", expand=True)
 
-   #     self.my_canvas.configure(yscrollcommand=self.scrollbar.set)
-    #    self.scrollable_frame = tk.Frame(self.my_canvas)
-     #   self.my_canvas.create_window((0, 0), window=self.scrollable_frame, anchor="nw")
-      #  self. scrollable_frame.bind("<Configure>", lambda e: self.my_canvas.configure(scrollregion=self.my_canvas.bbox("all")))
+        self.my_canvas = tk.Canvas(self.main_frame)
+        self.my_canvas.pack(side="left", fill="both", expand=True)
+
+        self.scrollbar = ttk.Scrollbar(self.main_frame, orient="vertical", command=self.my_canvas.yview)
+        self.scrollbar.pack(side="right", fill="y")
+
+        self.scrollable_frame = customtkinter.CTkScrollableFrame(root,width=1800, height=9999)
+        self.scrollable_frame.pack()
+
+        self. scrollable_frame.bind("<Configure>", lambda e: self.my_canvas.configure(scrollregion=self.my_canvas.bbox("all")))
 
         background_color = "#cc3628"
 
