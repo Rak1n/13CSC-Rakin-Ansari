@@ -1,3 +1,4 @@
+import tkinter
 from tkinter import *
 import tkinter as tk
 import customtkinter
@@ -23,6 +24,9 @@ class Menu:
     def __init__(self, parent):
         self.parent = parent
         self.root = root
+
+
+
         self.scrollable_frame = customtkinter.CTkScrollableFrame(
             self.parent,
             width=1920,
@@ -130,59 +134,56 @@ class Menu:
 
     is_clicked = True
 
+
+
     def order(self):
         try:
             self.overlay.destroy()
+            self.menu_window.destroy()
         except:
             pass
 
+        # Dark transparent background
         self.overlay = tk.Toplevel(self.parent)
-
         self.overlay.attributes("-fullscreen", True)
         self.overlay.attributes("-alpha", 0.5)
         self.overlay.configure(bg="black")
+        self.overlay.overrideredirect(True)
 
-        self.order_menu = tk.Frame(
-            self.overlay,
-            self.overlay.attributes("-alpha", 5),
-            width=300,
-            height=1080,
-            bg="blue"
+        # Solid menu
+        self.menu_window = tk.Toplevel(self.parent)
+        self.menu_window.overrideredirect(True)
+        self.menu_window.geometry("300x1080+1620+0")
+        self.menu_window.configure(bg="blue")
 
-        )
+        self.ko = tkinter.Frame(self.menu_window, borderwidth=100, width=200, bg="black")
+        self.ko.place(x=1080, y=0)
+        self.ko.lift()
 
-
-
-        self.order_menu.place(x=1620, y=0)
 
         self.overlay.lift()
+        self.menu_window.lift()
+
         self.overlay.grab_set()
 
         self.overlay.bind("<Button-1>", self.close_overlay)
 
-        self.order_menu.bind("<Button-1>", lambda e: "break")
-
     def close_overlay(self, event):
-        if not hasattr(self, "order_menu"):
-            return
-
         x = event.x_root
         y = event.y_root
 
-        menu_x = self.order_menu.winfo_rootx()
-        menu_y = self.order_menu.winfo_rooty()
-        menu_w = self.order_menu.winfo_width()
-        menu_h = self.order_menu.winfo_height()
+        menu_x = self.menu_window.winfo_rootx()
+        menu_y = self.menu_window.winfo_rooty()
+        menu_w = self.menu_window.winfo_width()
+        menu_h = self.menu_window.winfo_height()
 
         inside_menu = (
                 menu_x <= x <= menu_x + menu_w and
                 menu_y <= y <= menu_y + menu_h
         )
-        pywinstyles.set_opacity(self.overlay, value=0.5)
-
 
         if not inside_menu:
-            self.overlay.destroy()
+            self.menu_window.destroy()
             self.overlay.destroy()
 
     def pita(self):
@@ -259,7 +260,9 @@ if __name__ == "__main__":
         root.title("General Knowledge Quiz")
         root.configure(bg="#800517")
         Menu_object = Menu(root)
+
         root.mainloop()
+
 
 for x in range(9999):
     customtkinter.CTkScrollableFrame(Menu)
