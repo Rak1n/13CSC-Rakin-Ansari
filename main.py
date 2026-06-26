@@ -106,6 +106,7 @@ class Menu:
         self.bg_label.pack()
 
 
+
         self.info = Label(text="hi")
 
     def resize_bg(self, event):
