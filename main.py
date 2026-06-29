@@ -180,6 +180,7 @@ class Menu:
 
         if not inside_menu:
             self.menu_window.destroy()
+
             self.overlay.destroy()
 
     def pita(self):
