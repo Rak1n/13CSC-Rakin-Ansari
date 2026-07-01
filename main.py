@@ -207,19 +207,19 @@ class Menu:
         self.background.place(x=600, y=500)
 
         # --- Card 1: Teriyaki Pita ---
-        self.hg1 = customtkinter.CTkButton(root, bg_color="#cc3628", hover_color="#153c7d",height=320, width=250, text="",fg_color="#153c7d", text_color="#ffffff", corner_radius=23)
-        self.hg1.place(x=350, y=400)
+        self.backblue = customtkinter.CTkButton(root, bg_color="#cc3628", hover_color="#153c7d",height=320, width=250, text="",fg_color="#153c7d", text_color="#ffffff", corner_radius=23)
+        self.backblue.place(x=350, y=400)
 
-        self.hg = customtkinter.CTkButton(root, hover_color="#416db6", height=120, width=160,text="", bg_color="#153c7d", fg_color="#416db6",text_color="#ffffff", corner_radius=23)
-        self.hg.place(x=393, y=440)
-        self.hg.lift()
+        self.lightblue = customtkinter.CTkButton(root, hover_color="#416db6", height=120, width=160,text="", bg_color="#153c7d", fg_color="#416db6",text_color="#ffffff", corner_radius=23)
+        self.lightblue.place(x=393, y=440)
+        self.lightblue.lift()
 
-        self.f0ood = Image.open('Untitled Design - 1.png')
-        self.f0ood = self.f0ood.resize((200, 200))
-        self.f0ood = ImageTk.PhotoImage(self.f0ood)
-        self.food = Label(root, borderwidth=0,border=0, height=100, width=120, bg="#416db6", image=self.f0ood)
-        self.food.place(x=398, y=440)
-        self.food.lift()
+        self.food_image = Image.open('Untitled Design - 1.png')
+        self.food_image = self.food_image.resize((200, 200))
+        self.food_image = ImageTk.PhotoImage(self.food_image)
+        self.food_load = Label(root, borderwidth=0,border=0, height=90, width=120, bg="#416db6", image=self.food_image)
+        self.food_load.place(x=398, y=440)
+        self.food_load.lift()
 
         self.pita_name = Label(root, text="Teriyaki Pita", font=("arial", 11, "bold"),bg="#153c7d", fg="white")
         self.pita_name.place(x=425, y=575)
@@ -234,12 +234,12 @@ class Menu:
         self.add_btn.place(x=470, y=662)
 
         # --- Card 2 ---
-        self.we = customtkinter.CTkButton(root, bg_color="#cc3628", hover_color="#153c7d",height=320, width=250, text="",fg_color="#153c7d", text_color="#ffffff", corner_radius=23)
-        self.we.place(x=650, y=400)
+        self.backblue1 = customtkinter.CTkButton(root, bg_color="#cc3628", hover_color="#153c7d",height=320, width=250, text="",fg_color="#153c7d", text_color="#ffffff", corner_radius=23)
+        self.backblue1.place(x=650, y=400)
 
-        self.qw = customtkinter.CTkButton(root, hover_color="#416db6", height=120, width=160,text="", bg_color="#153c7d", fg_color="#416db6",text_color="#ffffff", corner_radius=23)
-        self.qw.place(x=693, y=440)
-        self.qw.lift()
+        self.lightblue1 = customtkinter.CTkButton(root, hover_color="#416db6", height=120, width=160,text="", bg_color="#153c7d", fg_color="#416db6",text_color="#ffffff", corner_radius=23)
+        self.lightblue1.place(x=693, y=440)
+        self.lightblue1.lift()
 
         self.card2_name = Label(root, text="Falafel Pita", font=("arial", 11, "bold"),bg="#153c7d", fg="white")
         self.card2_name.place(x=725, y=575)
@@ -304,11 +304,13 @@ class Menu:
 
 if __name__ == "__main__":
     root = tk.Tk()
+    app_icon = tk.PhotoImage(file="Falcon.png")
+    root.iconphoto(False,app_icon)
     root.geometry("1920x1080")
     root.minsize(10, 10)
     root.maxsize(1920, 1080)
-    root.iconbitmap("Falcon.png")
     root.title("General Knowledge Quiz")
     root.configure(bg="#800517")
     Menu_object = Menu(root)
+
     root.mainloop()
