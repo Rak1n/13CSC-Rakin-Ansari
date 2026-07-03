@@ -203,6 +203,7 @@ class Menu:
             self.menu_window = None
 
     def pita(self):
+
         self.background = Label(width=200, height=200, bg="#cc3628")
         self.background.place(x=600, y=500)
 
@@ -217,8 +218,8 @@ class Menu:
         self.food_image = Image.open('Untitled Design - 1.png')
         self.food_image = self.food_image.resize((200, 200))
         self.food_image = ImageTk.PhotoImage(self.food_image)
-        self.food_load = Label(root, borderwidth=0,border=0, height=90, width=120, bg="#416db6", image=self.food_image)
-        self.food_load.place(x=398, y=440)
+        self.food_load = Label(root, borderwidth=0,border=0, height=75, width=120, bg="#416db6", image=self.food_image)
+        self.food_load.place(x=420, y=450)
         self.food_load.lift()
 
         self.pita_name = Label(root, text="Teriyaki Pita", font=("arial", 11, "bold"),bg="#153c7d", fg="white")
@@ -252,7 +253,7 @@ class Menu:
 
         self.add_btn2 = customtkinter.CTkButton(root, text="Add +", width=80, height=28,fg_color="#cc3628", hover_color="#a02010",bg_color="#153c7d", corner_radius=10,command=lambda: self.add_to_order("Plain Pita", 6.50) )
         self.add_btn2.place(x=770, y=662)
-
+        self.sides.destroy()
     def main(self):
         self.background = Label(root, width=200, height=200, bg="#cc3628")
         self.background.place(x=600, y=500)
