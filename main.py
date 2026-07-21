@@ -204,6 +204,7 @@ class Menu:
 
     def pita(self):
 
+
         self.background = Label(width=200, height=200, bg="#cc3628")
         self.background.place(x=600, y=500)
 
@@ -222,8 +223,8 @@ class Menu:
         self.food_load.place(x=420, y=450)
         self.food_load.lift()
 
-        self.pita_name = Label(root, text="Teriyaki Pita", font=("arial", 11, "bold"),bg="#153c7d", fg="white")
-        self.pita_name.place(x=425, y=575)
+        self.pita_name = Label(root, text="Teriyaki Pita", font=("arial", 14, "bold"),bg="#153c7d", fg="white")
+        self.pita_name.place(x=410, y=570)
 
         self.pita_desc = Label(root, text="Fresh plain pita with shredded\nchicken, fresh veggies, cheese,\nand yummy teriyaki sauce.",font=("arial", 9), bg="#153c7d", fg="white")
         self.pita_desc.place(x=380, y=598)
@@ -242,8 +243,8 @@ class Menu:
         self.lightblue1.place(x=693, y=440)
         self.lightblue1.lift()
 
-        self.card2_name = Label(root, text="Falafel Pita", font=("arial", 11, "bold"),bg="#153c7d", fg="white")
-        self.card2_name.place(x=735, y=575)
+        self.card2_name = Label(root, text="Falafel Pita", font=("arial", 14, "bold"),bg="#153c7d", fg="white")
+        self.card2_name.place(x=720, y=570)
 
         self.card2_desc = Label(root, text="Fresh plain pita with falafel,\n fresh veggies, cheese, \nand sweet chilli sauce.",font=("arial", 9), bg="#153c7d", fg="white")
         self.card2_desc.place(x=700, y=598)
@@ -263,8 +264,8 @@ class Menu:
         self.lightblue2.place(x=993, y=440)
         self.lightblue2.lift()
 
-        self.card3_name = Label(root, text=" Chicken Pita - Mayonnaise", font=("arial", 11, "bold"),bg="#153c7d", fg="white")
-        self.card3_name.place(x=975, y=575)
+        self.card3_name = Label(root, text=" Chicken Pita-Mayonnaise", font=("arial", 13, "bold"),bg="#153c7d", fg="white")
+        self.card3_name.place(x=964, y=570)
 
         self.card3_desc = Label(root, text="Fresh plain pita with shredded \nchicken,  fresh veggies, \ncheese, and creamy mayo.",font=("arial", 9), bg="#153c7d", fg="white")
         self.card3_desc.place(x=985, y=598)
@@ -284,8 +285,8 @@ class Menu:
         self.lightblue3.place(x=1293, y=440)
         self.lightblue3.lift()
 
-        self.card4_name = Label(root, text="Chicken Pita - BBQ - LT", font=("arial", 11, "bold"),bg="#153c7d", fg="white")
-        self.card4_name.place(x=1275, y=575)
+        self.card4_name = Label(root, text="Chicken Pita-BBQ-LT", font=("arial", 13, "bold"),bg="#153c7d", fg="white")
+        self.card4_name.place(x=1263, y=570)
 
         self.card4_desc = Label(root, text="Fresh plain pita with shredded \nchicken, fresh veggies,\n cheese, and classic BBQ sauce.",font=("arial", 9), bg="#153c7d", fg="white")
         self.card4_desc.place(x=1285, y=598)
@@ -302,11 +303,11 @@ class Menu:
         self.backblue4.place(x=1550, y=400)
 
         self.lightblue4 = customtkinter.CTkButton(root, hover_color="#416db6", height=120, width=160,text="", bg_color="#153c7d", fg_color="#416db6",text_color="#ffffff", corner_radius=23)
-        self.lightblue4.place(x=1593, y=440)
+        self.lightblue4.place(x=1598, y=440)
         self.lightblue4.lift()
 
-        self.card5_name = Label(root, text="Chicken Pita - Sweet Chilli - LT", font=("arial", 11, "bold"),bg="#153c7d", fg="white")
-        self.card5_name.place(x=1565, y=575)
+        self.card5_name = Label(root, text="Chicken Pita-Sweet Chilli", font=("arial", 14,"bold"),bg="#153c7d", fg="white")
+        self.card5_name.place(x=1560, y=570)
 
         self.card5_desc = Label(root, text="Fresh plain pita with\n shredded chicken, fresh veggies, \ncheese, and sweet chilli sauce.",font=("arial", 9), bg="#153c7d", fg="white")
         self.card5_desc.place(x=1585, y=598)
@@ -380,3 +381,17 @@ if __name__ == "__main__":
     Menu_object = Menu(root)
 
     root.mainloop()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
