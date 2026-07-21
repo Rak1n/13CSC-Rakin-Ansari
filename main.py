@@ -84,7 +84,7 @@ class Menu:
         self.img_order.place(x=1070, y=0)
 
         # Sidebar frame — placed off-screen to the right initially
-        self.sidebar = Frame(root, bg="blue", width=300)
+        self.sidebar = Frame(root, bg="#153c7d", width=300)
         self.sidebar_visible = False
         # Don't place it yet; we'll use place() to show/hide it
 
@@ -243,35 +243,82 @@ class Menu:
         self.lightblue1.lift()
 
         self.card2_name = Label(root, text="Falafel Pita", font=("arial", 11, "bold"),bg="#153c7d", fg="white")
-        self.card2_name.place(x=725, y=575)
+        self.card2_name.place(x=735, y=575)
 
         self.card2_desc = Label(root, text="Fresh plain pita with falafel,\n fresh veggies, cheese, \nand sweet chilli sauce.",font=("arial", 9), bg="#153c7d", fg="white")
-        self.card2_desc.place(x=685, y=598)
+        self.card2_desc.place(x=700, y=598)
 
         self.price_label2 = Label(root, text="$8.25", font=("arial", 12, "bold"),bg="#153c7d", fg="white")
         self.price_label2.place(x=675, y=665)
 
         self.add_btn2 = customtkinter.CTkButton(root, text="Add +", width=80, height=28,fg_color="#cc3628", hover_color="#a02010",bg_color="#153c7d", corner_radius=10,command=lambda: self.add_to_order("Falafel Pita", 8.25) )
-        self.add_btn2.place(x=970, y=662)
-        self.backblue1 = customtkinter.CTkButton(root, bg_color="#cc3628", hover_color="#153c7d",height=320, width=250, text="",fg_color="#153c7d", text_color="#ffffff", corner_radius=23)
-        self.backblue1.place(x=850, y=400)
+        self.add_btn2.place(x=770, y=662)
 
-        self.lightblue1 = customtkinter.CTkButton(root, hover_color="#416db6", height=120, width=160,text="", bg_color="#153c7d", fg_color="#416db6",text_color="#ffffff", corner_radius=23)
-        self.lightblue1.place(x=893, y=440)
-        self.lightblue1.lift()
+        # --- Card 3 ---
 
-        self.card2_name = Label(root, text="Falafel Pita", font=("arial", 11, "bold"),bg="#153c7d", fg="white")
-        self.card2_name.place(x=925, y=575)
+        self.backblue2 = customtkinter.CTkButton(root, bg_color="#cc3628", hover_color="#153c7d",height=320, width=250, text="",fg_color="#153c7d", text_color="#ffffff", corner_radius=23)
+        self.backblue2.place(x=950, y=400)
 
-        self.card2_desc = Label(root, text="Fresh plain pita with falafel,\n fresh veggies, cheese, \nand sweet chilli sauce.",font=("arial", 9), bg="#153c7d", fg="white")
-        self.card2_desc.place(x=885, y=598)
+        self.lightblue2 = customtkinter.CTkButton(root, hover_color="#416db6", height=120, width=160,text="", bg_color="#153c7d", fg_color="#416db6",text_color="#ffffff", corner_radius=23)
+        self.lightblue2.place(x=993, y=440)
+        self.lightblue2.lift()
 
-        self.price_label2 = Label(root, text="$8.25", font=("arial", 12, "bold"),bg="#153c7d", fg="white")
-        self.price_label2.place(x=875, y=665)
+        self.card3_name = Label(root, text=" Chicken Pita - Mayonnaise", font=("arial", 11, "bold"),bg="#153c7d", fg="white")
+        self.card3_name.place(x=975, y=575)
 
-        self.add_btn2 = customtkinter.CTkButton(root, text="Add +", width=80, height=28,fg_color="#cc3628", hover_color="#a02010",bg_color="#153c7d", corner_radius=10,command=lambda: self.add_to_order("Falafel Pita", 8.25) )
-        self.add_btn2.place(x=970, y=662)
+        self.card3_desc = Label(root, text="Fresh plain pita with shredded \nchicken,  fresh veggies, \ncheese, and creamy mayo.",font=("arial", 9), bg="#153c7d", fg="white")
+        self.card3_desc.place(x=985, y=598)
+
+        self.price_label3 = Label(root, text="$8.25", font=("arial", 12, "bold"),bg="#153c7d", fg="white")
+        self.price_label3.place(x=975, y=665)
+
+        self.add_btn3 = customtkinter.CTkButton(root, text="Add +", width=80, height=28,fg_color="#cc3628", hover_color="#a02010",bg_color="#153c7d", corner_radius=10,command=lambda: self.add_to_order(" Chicken Pita - Mayonnaise", 8.25) )
+        self.add_btn3.place(x=1070, y=662)
+
+        # --- Card 4 ---
+
+        self.backblue3 = customtkinter.CTkButton(root, bg_color="#cc3628", hover_color="#153c7d",height=320, width=250, text="",fg_color="#153c7d", text_color="#ffffff", corner_radius=23)
+        self.backblue3.place(x=1250, y=400)
+
+        self.lightblue3 = customtkinter.CTkButton(root, hover_color="#416db6", height=120, width=160,text="", bg_color="#153c7d", fg_color="#416db6",text_color="#ffffff", corner_radius=23)
+        self.lightblue3.place(x=1293, y=440)
+        self.lightblue3.lift()
+
+        self.card4_name = Label(root, text="Chicken Pita - BBQ - LT", font=("arial", 11, "bold"),bg="#153c7d", fg="white")
+        self.card4_name.place(x=1275, y=575)
+
+        self.card4_desc = Label(root, text="Fresh plain pita with shredded \nchicken, fresh veggies,\n cheese, and classic BBQ sauce.",font=("arial", 9), bg="#153c7d", fg="white")
+        self.card4_desc.place(x=1285, y=598)
+
+        self.price_label4 = Label(root, text="$8.25", font=("arial", 12, "bold"),bg="#153c7d", fg="white")
+        self.price_label4.place(x=1275, y=665)
+
+        self.add_btn4 = customtkinter.CTkButton(root, text="Add +", width=80, height=28,fg_color="#cc3628", hover_color="#a02010",bg_color="#153c7d", corner_radius=10,command=lambda: self.add_to_order("Chicken Pita - BBQ - LT", 8.25) )
+        self.add_btn4.place(x=1370, y=662)
+
+        # --- Card 5 ---
+
+        self.backblue4 = customtkinter.CTkButton(root, bg_color="#cc3628", hover_color="#153c7d",height=320, width=250, text="",fg_color="#153c7d", text_color="#ffffff", corner_radius=23)
+        self.backblue4.place(x=1550, y=400)
+
+        self.lightblue4 = customtkinter.CTkButton(root, hover_color="#416db6", height=120, width=160,text="", bg_color="#153c7d", fg_color="#416db6",text_color="#ffffff", corner_radius=23)
+        self.lightblue4.place(x=1593, y=440)
+        self.lightblue4.lift()
+
+        self.card5_name = Label(root, text="Chicken Pita - Sweet Chilli - LT", font=("arial", 11, "bold"),bg="#153c7d", fg="white")
+        self.card5_name.place(x=1565, y=575)
+
+        self.card5_desc = Label(root, text="Fresh plain pita with\n shredded chicken, fresh veggies, \ncheese, and sweet chilli sauce.",font=("arial", 9), bg="#153c7d", fg="white")
+        self.card5_desc.place(x=1585, y=598)
+
+        self.price_label5 = Label(root, text="$8.25", font=("arial", 12, "bold"),bg="#153c7d", fg="white")
+        self.price_label5.place(x=1575, y=665)
+
+        self.add_btn5 = customtkinter.CTkButton(root, text="Add +", width=80, height=28,fg_color="#cc3628", hover_color="#a02010",bg_color="#153c7d", corner_radius=10,command=lambda: self.add_to_order(" Chicken Pita - Sweet Chilli - LT", 8.25) )
+        self.add_btn5.place(x=1670, y=662)
+
         self.sides.destroy()
+
     def main(self):
         self.background = Label(root, width=200, height=200, bg="#cc3628")
         self.background.place(x=600, y=500)
