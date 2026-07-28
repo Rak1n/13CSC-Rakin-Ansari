@@ -21,7 +21,7 @@ asked = []
 score = 0
 is_clicked = False
 
-
+# Class function for entire code
 class Menu:
     def __init__(self, parent):
         self.parent = parent
@@ -29,7 +29,7 @@ class Menu:
         self.order_items = []
 
         background_color = "#cc3628"
-
+        #Code to generate the background image, and size the image to fix the widget
         self.original_bg_image = Image.open("Screenshot 2026-05-18 124046.png")
         self.original_bg_image = self.original_bg_image.resize((1920, 1080), Image.LANCZOS)
         self.bg_photo = ImageTk.PhotoImage(self.original_bg_image)
@@ -39,17 +39,17 @@ class Menu:
         self.bg_label.lower()
 
         self.bg_label.place(x=0, y=0)
-
+        #COde for the Bar/Header
         self.bar = Label(root, bg="#153c7d")
         self.bar.place(x=0, y=0, relwidth=1, height=60)
-
+        #Loads the text on the initial page when nothing is clicked
         self.text = Label(root, text="Mount Roskill Grammar", font=("arial", 30, "underline", "bold"), bg="#cc3628")
         self.text.place(x=870, y=500)
 
         self.text2 = Label(root, font=("arial", 20), bg="#cc3628",
                            text="Mount Roskill Grammar was founded 1953 and began with a roll of 363 students, \n that intial started as a part of an auckland rugby union.")
         self.text2.place(x=600, y=560)
-
+        #The creation of the sidebar using CustomTKinter, and used to assign later Def() to generate the menu pages
         self.button = PhotoImage(file='button_menu (1).png')
         self.img = Label(root, borderwidth=0, width=200, bg="#cc3628", image=self.button,
                          activebackground="#cc3628", activeforeground="white")
@@ -71,20 +71,15 @@ class Menu:
         self.img4.place(x=60, y=680)
 
         self.button5 = PhotoImage(file='button_sides (1).png')
-        self.img5 = Button(root, borderwidth=0, width=200, command=self.sides, bg="#cc3628",
-                           image=self.button5, activebackground="#cc3628", activeforeground="white")
+        self.img5 = Button(root, borderwidth=0, width=200, command=self.sides, bg="#cc3628",image=self.button5, activebackground="#cc3628", activeforeground="white")
         self.img5.place(x=61, y=750)
 
-        self.img_order = customtkinter.CTkButton(root, fg_color="black", text="Order", font=("Canva Sans", 16, "bold"),command=self.toggle_sidebar,
-                                                 corner_radius=100, height=60, width=30,
-                                                 border_width=3, bg_color="#153c7d")
+        self.img_order = customtkinter.CTkButton(root, fg_color="black", text="Order", font=("Canva Sans", 16, "bold"),command=self.toggle_sidebar,corner_radius=100, height=60, width=30,border_width=3, bg_color="#153c7d")
         self.img_order.place(x=10, y=0)
 
         self.sidebar = Frame(root, bg="#153c7d", width=300)
         self.sidebar_visible = False
 
-        self.overlay = None
-        self.menu_window = None
         root.bind_all("<Button-1>",self.on_global_click,add="+")
         self.quiz_frame = Frame(root, background=background_color)
         self.quiz_frame.place(relx=0.5, rely=0.5, anchor=CENTER)
@@ -92,38 +87,25 @@ class Menu:
         self.content_frame = Frame(self.quiz_frame, background=background_color)
         self.content_frame.grid()
 
-        self.overlay = None
-        self.menu_window = None
-
-
         self.menu_widgets = []
 
-    def resize_bg(self, event):
-        if event.widget == self.parent:
-            new_image = self.original_bg_image.resize((event.width, event.height), Image.LANCZOS)
-            self.bg_photo = ImageTk.PhotoImage(new_image)
-            self.bg_label.config(image=self.bg_photo)
-            self.bg_label.image = self.bg_photo
-            self.bg_label.lower()
-
-
+    #function to remove selected order
     def clear_items(self):
         for widget in self.menu_widgets:
             widget.destroy()
         self.menu_widgets = []
 
-
     def track(self, widget):
         self.menu_widgets.append(widget)
         return widget
-
+    #function to add selected order
     def add_to_order(self, item_name, price):
         self.order_items.append((item_name, price))
         try:
             self.update_order_display()
         except Exception:
             pass
-
+    #function to update the sidebar when items are selected, and allow code to double check if an error occurs
     def update_order_display(self):
         if not self.sidebar_visible:
             return
@@ -131,30 +113,20 @@ class Menu:
         for widget in self.sidebar.winfo_children():
             widget.destroy()
 
-        Label(self.sidebar, text="Your Order", font=("arial", 16, "bold"),
-              bg="#153c7d", fg="white").pack(pady=10)
+        Label(self.sidebar, text="Your Order", font=("arial", 16, "bold"),bg="#153c7d", fg="white").pack(pady=10)
 
         total = 0
         for name, price in self.order_items:
-            Label(self.sidebar, text=f"{name}  ${price:.2f}",
-                  font=("arial", 12), bg="#153c7d", fg="white").pack(pady=2)
+            Label(self.sidebar, text=f"{name}  ${price:.2f}",font=("arial", 12), bg="#153c7d", fg="white").pack(pady=2)
             total += price
 
-        Label(self.sidebar, text=f"Total: ${total:.2f}",
-              font=("arial", 14, "bold"), bg="#153c7d", fg="white").pack(pady=10)
+        Label(self.sidebar, text=f"Total: ${total:.2f}",font=("arial", 14, "bold"), bg="#153c7d", fg="white").pack(pady=10)
+        #Code for button that generate on the sidebar that can place,clear, and close the sidebar, using the def()
+        customtkinter.CTkButton(self.sidebar, text="Place  Order", fg_color="#cc3628",hover_color="#a02010", corner_radius=10,command=self.clear_order).pack(pady=10)
+        customtkinter.CTkButton(self.sidebar, text="Clear  Order", fg_color="#cc3628",hover_color="#a02010", corner_radius=10,command=self.clear_order).pack(pady=5)
+        customtkinter.CTkButton(self.sidebar, text="✕ Close", fg_color="#333333",hover_color="#555555", corner_radius=10,command=self.toggle_sidebar).pack(pady=5)
 
-        customtkinter.CTkButton(
-            self.sidebar, text="Place  Order", fg_color="#cc3628",
-            hover_color="#a02010", corner_radius=10,
-            command=self.clear_order
-        ).pack(pady=10)
-
-        customtkinter.CTkButton(
-            self.sidebar, text="✕ Close", fg_color="#333333",
-            hover_color="#555555", corner_radius=10,
-            command=self.toggle_sidebar
-        ).pack(pady=5)
-
+    #Created function to closed the overlay/sidebar of the order section, when an user clicks outside the registered area.
     def on_global_click(self,event):
         if not self.sidebar_visible:
             return
@@ -177,7 +149,7 @@ class Menu:
             self.toggle_sidebar()
 
 
-
+    #Code used to toggle the sidebar order section, when order button is clicked.
     def toggle_sidebar(self):
         if self.sidebar_visible:
             self.sidebar.place_forget()
@@ -188,51 +160,12 @@ class Menu:
             self.sidebar_visible = True
             self.update_order_display()
 
+    #Code used to clear all menu item when the order is placed
     def clear_order(self):
         self.order_items = []
         self.update_order_display()
 
-    def order(self):
-        self.toggle_sidebar()
-
-        self.overlay = tk.Toplevel(self.parent)
-        self.overlay.attributes("-fullscreen", True)
-        self.overlay.attributes("-alpha", 0.5)
-        self.overlay.configure(bg="black")
-        self.overlay.overrideredirect(True)
-
-        self.menu_window = tk.Toplevel(self.parent)
-        self.menu_window.overrideredirect(True)
-        self.menu_window.geometry("300x1080+1620+0")
-        self.menu_window.configure(bg="blue")
-
-        self.overlay.lift()
-        self.menu_window.lift()
-        self.overlay.grab_set()
-        self.overlay.bind("<Button-1>", self.close_overlay)
-
-        self.update_order_display()
-
-    def close_overlay(self, event):
-        x = event.x_root
-        y = event.y_root
-
-        menu_x = self.menu_window.winfo_rootx()
-        menu_y = self.menu_window.winfo_rooty()
-        menu_w = self.menu_window.winfo_width()
-        menu_h = self.menu_window.winfo_height()
-
-        inside_menu = (
-            menu_x <= x <= menu_x + menu_w and
-            menu_y <= y <= menu_y + menu_h
-        )
-
-        if not inside_menu:
-            self.menu_window.destroy()
-            self.overlay.destroy()
-            self.overlay = None
-            self.menu_window = None
-
+    #Created function for Pita menu items
     def pita(self):
         self.clear_items()
         parent = root
@@ -403,7 +336,7 @@ class Menu:
             command=lambda: self.add_to_order(" Chicken Pita - Sweet Chilli - LT", 8.25)))
         self.add_btn5.place(x=1670, y=762)
 
-
+    #Created function for Main menu items
     def main(self):
         self.clear_items()
         parent = root
@@ -605,7 +538,7 @@ class Menu:
                                     hover_color="#a02010", bg_color="#153c7d", corner_radius=10,
                                     command=lambda: self.add_to_order("Nachos - Beef - LT", 9.35)))
         self.add_btn5.place(x=1670, y=762)
-
+    #Created function for Sides menu items
     def sides(self):
         self.clear_items()
         parent = root
@@ -778,6 +711,7 @@ class Menu:
             command=lambda: self.add_to_order("Hashbrown", 2.20)))
         self.add_btn5.place(x=1670, y=762)
 
+    #Created function for Specials menu items
     def specials(self):
         self.clear_items()
         parent = root
@@ -897,7 +831,7 @@ class Menu:
             command=lambda: self.add_to_order("Premium Pie - Steak&Cheese", 8.50)))
         self.add_btn3.place(x=1070, y=762)
 
-
+#Run the menu class
 if __name__ == "__main__":
     root = tk.Tk()
     app_icon = tk.PhotoImage(file="Falcon.png")
