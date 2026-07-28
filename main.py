@@ -80,7 +80,6 @@ class Menu:
                                                  border_width=3, bg_color="#153c7d")
         self.img_order.place(x=1070, y=0)
 
-        # Sidebar frame — placed off-screen to the right initially
         self.sidebar = Frame(root, bg="#153c7d", width=300)
         self.sidebar_visible = False
 
