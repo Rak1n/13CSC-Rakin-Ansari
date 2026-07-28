@@ -133,19 +133,19 @@ class Menu:
             widget.destroy()
 
         Label(self.sidebar, text="Your Order", font=("arial", 16, "bold"),
-              bg="blue", fg="white").pack(pady=10)
+              bg="#153c7d", fg="white").pack(pady=10)
 
         total = 0
         for name, price in self.order_items:
             Label(self.sidebar, text=f"{name}  ${price:.2f}",
-                  font=("arial", 12), bg="blue", fg="white").pack(pady=2)
+                  font=("arial", 12), bg="#153c7d", fg="white").pack(pady=2)
             total += price
 
         Label(self.sidebar, text=f"Total: ${total:.2f}",
-              font=("arial", 14, "bold"), bg="blue", fg="white").pack(pady=10)
+              font=("arial", 14, "bold"), bg="#153c7d", fg="white").pack(pady=10)
 
         customtkinter.CTkButton(
-            self.sidebar, text="Clear Order", fg_color="#cc3628",
+            self.sidebar, text="Place  Order", fg_color="#cc3628",
             hover_color="#a02010", corner_radius=10,
             command=self.clear_order
         ).pack(pady=10)
@@ -434,19 +434,19 @@ class Menu:
 
         self.pita_name = self.track(
             Label(parent, text="Sloppy Jo", font=("arial", 11, "bold"), bg="#153c7d", fg="white"))
-        self.pita_name.place(x=425, y=675)
+        self.pita_name.place(x=434, y=675)
 
         self.pita_desc = self.track(Label(parent,
-                                          text="Savory beef mince in a soft burger bun, topped with a melty cheese slice and smoky BBQ sauce.",
+                                          text="Savory beef mince in a soft burger\n bun, topped with a melty cheese \nslice and smoky BBQ sauce.",
                                           font=("arial", 9), bg="#153c7d", fg="white"))
-        self.pita_desc.place(x=380, y=698)
+        self.pita_desc.place(x=380, y=700)
 
-        self.price_label = self.track(Label(parent, text="$8.25", font=("arial", 12, "bold"), bg="#153c7d", fg="white"))
+        self.price_label = self.track(Label(parent, text="$7.70", font=("arial", 12, "bold"), bg="#153c7d", fg="white"))
         self.price_label.place(x=375, y=765)
 
         self.add_btn = self.track(customtkinter.CTkButton(parent, text="Add +", width=80, height=28, fg_color="#cc3628",
                                                           hover_color="#a02010", bg_color="#153c7d", corner_radius=10,
-                                                          command=lambda: self.add_to_order("Sloppy Jo - LT", 8.25)))
+                                                          command=lambda: self.add_to_order("Sloppy Jo - LT", 7.70)))
         self.add_btn.place(x=470, y=762)
 
         # --- Card 2 ---
@@ -472,21 +472,21 @@ class Menu:
 
         self.card2_name = self.track(
             Label(parent, text="Chicken Burger with Works  ", font=("arial", 11, "bold"), bg="#153c7d", fg="white"))
-        self.card2_name.place(x=735, y=675)
+        self.card2_name.place(x=675, y=675)
 
         self.card2_desc = self.track(
-            Label(parent, text="Golden chicken patty in a soft burger bun with melty cheese, fresh tomato and lettuce, smoky BBQ sauce, and creamy mayo.",
+            Label(parent, text="Golden chicken patty in a soft\n burger bun with melty cheese, fresh\n tomato and lettuce, smoky BBQ\n sauce, and creamy mayo.",
                   font=("arial", 9), bg="#153c7d", fg="white"))
-        self.card2_desc.place(x=700, y=698)
+        self.card2_desc.place(x=675, y=698)
 
         self.price_label2 = self.track(
-            Label(parent, text="$8.25", font=("arial", 12, "bold"), bg="#153c7d", fg="white"))
+            Label(parent, text="$7.70", font=("arial", 12, "bold"), bg="#153c7d", fg="white"))
         self.price_label2.place(x=675, y=765)
 
         self.add_btn2 = self.track(
             customtkinter.CTkButton(parent, text="Add +", width=80, height=28, fg_color="#cc3628",
                                     hover_color="#a02010", bg_color="#153c7d", corner_radius=10,
-                                    command=lambda: self.add_to_order("Chicken Burger with Works", 8.25)))
+                                    command=lambda: self.add_to_order("Chicken Burger with Works", 7.70)))
         self.add_btn2.place(x=770, y=762)
 
         # --- Card 3 ---
@@ -511,21 +511,21 @@ class Menu:
 
         self.card3_name = self.track(
             Label(parent, text="Spaghetti Meatballs", font=("arial", 11, "bold"), bg="#153c7d", fg="white"))
-        self.card3_name.place(x=975, y=675)
+        self.card3_name.place(x=1000, y=675)
 
         self.card3_desc = self.track(
-            Label(parent, text="Al dente spaghetti with savoury meatballs, rich Napolitana sauce, and a sprinkle of shredded cheese.",
+            Label(parent, text="Al dente spaghetti with savoury \nmeatballs, rich Napolitana sauce, and a \nsprinkle of shredded cheese.",
                   font=("arial", 9), bg="#153c7d", fg="white"))
-        self.card3_desc.place(x=985, y=698)
+        self.card3_desc.place(x=965, y=698)
 
         self.price_label3 = self.track(
-            Label(parent, text="$8.25", font=("arial", 12, "bold"), bg="#153c7d", fg="white"))
+            Label(parent, text="$9.35", font=("arial", 12, "bold"), bg="#153c7d", fg="white"))
         self.price_label3.place(x=975, y=765)
 
         self.add_btn3 = self.track(
             customtkinter.CTkButton(parent, text="Add +", width=80, height=28, fg_color="#cc3628",
                                     hover_color="#a02010", bg_color="#153c7d", corner_radius=10,
-                                    command=lambda: self.add_to_order("Spaghetti Meatballs - LT", 8.25)))
+                                    command=lambda: self.add_to_order("Spaghetti Meatballs - LT", 9.35)))
         self.add_btn3.place(x=1070, y=762)
 
         # --- Card 4 ---
@@ -550,21 +550,21 @@ class Menu:
 
         self.card4_name = self.track(
             Label(parent, text="Chicken Sub Roll", font=("arial", 11, "bold"), bg="#153c7d", fg="white"))
-        self.card4_name.place(x=1295, y=675)
+        self.card4_name.place(x=1310, y=675)
 
         self.card4_desc = self.track(Label(parent,
-                                           text="Soft split roll filled with crispy chicken bites and drizzled with spicy chilli mayo.",
+                                           text="Soft split roll filled with \ncrispy chicken bites\n and drizzled with \nspicy chilli mayo.",
                                            font=("arial", 9), bg="#153c7d", fg="white"))
-        self.card4_desc.place(x=1285, y=698)
+        self.card4_desc.place(x=1310, y=698)
 
         self.price_label4 = self.track(
-            Label(parent, text="$8.25", font=("arial", 12, "bold"), bg="#153c7d", fg="white"))
+            Label(parent, text="$7.15", font=("arial", 12, "bold"), bg="#153c7d", fg="white"))
         self.price_label4.place(x=1275, y=765)
 
         self.add_btn4 = self.track(
             customtkinter.CTkButton(parent, text="Add +", width=80, height=28, fg_color="#cc3628",
                                     hover_color="#a02010", bg_color="#153c7d", corner_radius=10,
-                                    command=lambda: self.add_to_order("Chicken Sub Roll", 8.25)))
+                                    command=lambda: self.add_to_order("Chicken Sub Roll", 7.15)))
         self.add_btn4.place(x=1370, y=762)
 
         # --- Card 5 ---
@@ -590,21 +590,21 @@ class Menu:
         self.card5_name = self.track(
             Label(parent, text="Nachos - Beef ", font=("arial", 11, "bold"), bg="#153c7d",
                   fg="white"))
-        self.card5_name.place(x=1565, y=675)
+        self.card5_name.place(x=1615, y=675)
 
         self.card5_desc = self.track(Label(parent,
-                                           text="Crispy corn chips topped with hearty beef chilli con carne and melted cheese.",
+                                           text="Crispy corn chips topped \nwith hearty beef chilli\n con carne and melted cheese.",
                                            font=("arial", 9), bg="#153c7d", fg="white"))
         self.card5_desc.place(x=1585, y=698)
 
         self.price_label5 = self.track(
-            Label(parent, text="$8.25", font=("arial", 12, "bold"), bg="#153c7d", fg="white"))
+            Label(parent, text="$9.35", font=("arial", 12, "bold"), bg="#153c7d", fg="white"))
         self.price_label5.place(x=1575, y=765)
 
         self.add_btn5 = self.track(
             customtkinter.CTkButton(parent, text="Add +", width=80, height=28, fg_color="#cc3628",
                                     hover_color="#a02010", bg_color="#153c7d", corner_radius=10,
-                                    command=lambda: self.add_to_order("Nachos - Beef - LT", 8.25)))
+                                    command=lambda: self.add_to_order("Nachos - Beef - LT", 9.35)))
         self.add_btn5.place(x=1670, y=762)
 
     def sides(self):
@@ -622,7 +622,7 @@ class Menu:
         self.lightblue.place(x=393, y=540)
         self.lightblue.lift()
 
-        self.food_image = Image.open('download.png')
+        self.food_image = Image.open('download (15).png')
         self.food_image = self.food_image.resize((100, 100))
         self.food_image = ImageTk.PhotoImage(self.food_image)
         self.food_load = self.track(Label(parent, borderwidth=0, border=0, height=80, width=120, bg="#416db6", image=self.food_image))
@@ -631,19 +631,19 @@ class Menu:
 
 
 
-        self.pita_name = self.track(Label(parent, text="Teriyaki Pita", font=("arial", 11, "bold"), bg="#153c7d", fg="white"))
-        self.pita_name.place(x=425, y=675)
+        self.pita_name = self.track(Label(parent, text="Pretzel - Sweet", font=("arial", 11, "bold"), bg="#153c7d", fg="white"))
+        self.pita_name.place(x=415, y=675)
 
-        self.pita_desc = self.track(Label(parent, text="Fresh plain pita with shredded\nchicken, fresh veggies, cheese,\nand yummy teriyaki sauce.",
+        self.pita_desc = self.track(Label(parent, text="Pretzel coated in sweet\n glaze and dusted with \nwarm cinnamon sugar.",
             font=("arial", 9), bg="#153c7d", fg="white"))
-        self.pita_desc.place(x=380, y=698)
+        self.pita_desc.place(x=410, y=698)
 
-        self.price_label = self.track(Label(parent, text="$8.25", font=("arial", 12, "bold"), bg="#153c7d", fg="white"))
+        self.price_label = self.track(Label(parent, text="$5.50", font=("arial", 12, "bold"), bg="#153c7d", fg="white"))
         self.price_label.place(x=375, y=765)
 
         self.add_btn = self.track(customtkinter.CTkButton(parent, text="Add +", width=80, height=28, fg_color="#cc3628",
             hover_color="#a02010", bg_color="#153c7d", corner_radius=10,
-            command=lambda: self.add_to_order("Teriyaki Pita", 8.25)))
+            command=lambda: self.add_to_order("Pretzel - Sweet - LT", 5.50)))
         self.add_btn.place(x=470, y=762)
 
         # --- Card 2 ---
@@ -657,26 +657,26 @@ class Menu:
         self.lightblue1.place(x=693, y=540)
         self.lightblue1.lift()
 
-        self.food_image1 = Image.open('download (1).png')
+        self.food_image1 = Image.open('download (16).png')
         self.food_image1 = self.food_image1.resize((100, 100))
         self.food_image1 = ImageTk.PhotoImage(self.food_image1)
         self.food_load1 = self.track(Label(parent, borderwidth=0, border=0, height=80, width=120, bg="#416db6", image=self.food_image1))
         self.food_load1.place(x=715, y=560)
         self.food_load1.lift()
 
-        self.card2_name = self.track(Label(parent, text="Falafel Pita", font=("arial", 11, "bold"), bg="#153c7d", fg="white"))
-        self.card2_name.place(x=735, y=675)
+        self.card2_name = self.track(Label(parent, text="Cheesy Garlic Pita", font=("arial", 11, "bold"), bg="#153c7d", fg="white"))
+        self.card2_name.place(x=710, y=675)
 
-        self.card2_desc = self.track(Label(parent, text="Fresh plain pita with falafel,\n fresh veggies, cheese, \nand sweet chilli sauce.",
+        self.card2_desc = self.track(Label(parent, text="Pita brushed with garlic \nbutter and topped with melted \ngrated cheese.",
             font=("arial", 9), bg="#153c7d", fg="white"))
-        self.card2_desc.place(x=700, y=698)
+        self.card2_desc.place(x=685, y=698)
 
-        self.price_label2 = self.track(Label(parent, text="$8.25", font=("arial", 12, "bold"), bg="#153c7d", fg="white"))
+        self.price_label2 = self.track(Label(parent, text="$3.85", font=("arial", 12, "bold"), bg="#153c7d", fg="white"))
         self.price_label2.place(x=675, y=765)
 
         self.add_btn2 = self.track(customtkinter.CTkButton(parent, text="Add +", width=80, height=28, fg_color="#cc3628",
             hover_color="#a02010", bg_color="#153c7d", corner_radius=10,
-            command=lambda: self.add_to_order("Falafel Pita", 8.25)))
+            command=lambda: self.add_to_order("Cheesy Garlic Pita - LT", 3.85)))
         self.add_btn2.place(x=770, y=762)
 
 
@@ -690,7 +690,7 @@ class Menu:
         self.lightblue2.place(x=993, y=540)
         self.lightblue2.lift()
 
-        self.food_image2 = Image.open('download (2).png')
+        self.food_image2 = Image.open('download (17).png')
         self.food_image2 = self.food_image2.resize((100, 100))
         self.food_image2 = ImageTk.PhotoImage(self.food_image2)
         self.food_load2 = self.track(Label(parent, borderwidth=0, border=0, height=80, width=120, bg="#416db6", image=self.food_image2))
@@ -698,19 +698,19 @@ class Menu:
         self.food_load2.lift()
 
 
-        self.card3_name = self.track(Label(parent, text=" Chicken Pita - Mayonnaise", font=("arial", 11, "bold"), bg="#153c7d", fg="white"))
-        self.card3_name.place(x=975, y=675)
+        self.card3_name = self.track(Label(parent, text="Garlic Bread Regular", font=("arial", 11, "bold"), bg="#153c7d", fg="white"))
+        self.card3_name.place(x=993, y=675)
 
         self.card3_desc = self.track(Label(parent, text="Fresh plain pita with shredded \nchicken,  fresh veggies, \ncheese, and creamy mayo.",
             font=("arial", 9), bg="#153c7d", fg="white"))
-        self.card3_desc.place(x=985, y=698)
+        self.card3_desc.place(x=990, y=698)
 
-        self.price_label3 = self.track(Label(parent, text="$8.25", font=("arial", 12, "bold"), bg="#153c7d", fg="white"))
+        self.price_label3 = self.track(Label(parent, text="$4.95", font=("arial", 12, "bold"), bg="#153c7d", fg="white"))
         self.price_label3.place(x=975, y=765)
 
         self.add_btn3 = self.track(customtkinter.CTkButton(parent, text="Add +", width=80, height=28, fg_color="#cc3628",
             hover_color="#a02010", bg_color="#153c7d", corner_radius=10,
-            command=lambda: self.add_to_order(" Chicken Pita - Mayonnaise", 8.25)))
+            command=lambda: self.add_to_order("Garlic Bread Regular - LT", 4.95)))
         self.add_btn3.place(x=1070, y=762)
 
         # --- Card 4 ---
@@ -723,26 +723,28 @@ class Menu:
         self.lightblue3.place(x=1293, y=540)
         self.lightblue3.lift()
 
-        self.food_image3 = Image.open('download (3).png')
+        self.food_image3 = Image.open('download (18).png')
         self.food_image3 = self.food_image3.resize((100, 100))
         self.food_image3 = ImageTk.PhotoImage(self.food_image3)
         self.food_load3 = self.track(Label(parent, borderwidth=0, border=0, height=80, width=120, bg="#416db6", image=self.food_image3))
         self.food_load3.place(x=1310, y=560)
         self.food_load3.lift()
 
-        self.card4_name = self.track(Label(parent, text="Chicken Pita - BBQ - LT", font=("arial", 11, "bold"), bg="#153c7d", fg="white"))
-        self.card4_name.place(x=1295, y=675)
 
-        self.card4_desc = self.track(Label(parent, text="Fresh plain pita with shredded \nchicken, fresh veggies,\n cheese, and classic BBQ sauce.",
+
+        self.card4_name = self.track(Label(parent, text="Wedges", font=("arial", 11, "bold"), bg="#153c7d", fg="white"))
+        self.card4_name.place(x=1345, y=675)
+
+        self.card4_desc = self.track(Label(parent, text="Warm potato wedges with \na golden, seasoned finish.",
             font=("arial", 9), bg="#153c7d", fg="white"))
-        self.card4_desc.place(x=1285, y=698)
+        self.card4_desc.place(x=1300, y=698)
 
-        self.price_label4 = self.track(Label(parent, text="$8.25", font=("arial", 12, "bold"), bg="#153c7d", fg="white"))
+        self.price_label4 = self.track(Label(parent, text="$4.95", font=("arial", 12, "bold"), bg="#153c7d", fg="white"))
         self.price_label4.place(x=1275, y=765)
 
         self.add_btn4 = self.track(customtkinter.CTkButton(parent, text="Add +", width=80, height=28, fg_color="#cc3628",
             hover_color="#a02010", bg_color="#153c7d", corner_radius=10,
-            command=lambda: self.add_to_order("Chicken Pita - BBQ - LT", 8.25)))
+            command=lambda: self.add_to_order("Wedges - LT", 4.95)))
         self.add_btn4.place(x=1370, y=762)
 
         # --- Card 5 ---
@@ -755,26 +757,26 @@ class Menu:
         self.lightblue4.place(x=1593, y=540)
         self.lightblue4.lift()
 
-        self.food_image4 = Image.open('download (4).png')
+        self.food_image4 = Image.open('download (19).png')
         self.food_image4 = self.food_image4.resize((100, 100))
         self.food_image4 = ImageTk.PhotoImage(self.food_image4)
         self.food_load4 = self.track(Label(parent, borderwidth=0, border=0, height=80, width=120, bg="#416db6", image=self.food_image4))
         self.food_load4.place(x=1610, y=560)
         self.food_load4.lift()
 
-        self.card5_name = self.track(Label(parent, text="Chicken Pita - Sweet Chilli - LT", font=("arial", 11, "bold"), bg="#153c7d", fg="white"))
-        self.card5_name.place(x=1565, y=675)
+        self.card5_name = self.track(Label(parent, text="Hashbrown ", font=("arial", 11, "bold"), bg="#153c7d", fg="white"))
+        self.card5_name.place(x=1630, y=675)
 
-        self.card5_desc = self.track(Label(parent, text="Fresh plain pita with\n shredded chicken, fresh veggies, \ncheese, and sweet chilli sauce.",
+        self.card5_desc = self.track(Label(parent, text="Golden hash brown with a\n crisp outside and soft, \nfluffy potato inside.",
             font=("arial", 9), bg="#153c7d", fg="white"))
-        self.card5_desc.place(x=1585, y=698)
+        self.card5_desc.place(x=1600, y=698)
 
-        self.price_label5 = self.track(Label(parent, text="$8.25", font=("arial", 12, "bold"), bg="#153c7d", fg="white"))
+        self.price_label5 = self.track(Label(parent, text="$2.20", font=("arial", 12, "bold"), bg="#153c7d", fg="white"))
         self.price_label5.place(x=1575, y=765)
 
         self.add_btn5 = self.track(customtkinter.CTkButton(parent, text="Add +", width=80, height=28, fg_color="#cc3628",
             hover_color="#a02010", bg_color="#153c7d", corner_radius=10,
-            command=lambda: self.add_to_order(" Chicken Pita - Sweet Chilli - LT", 8.25)))
+            command=lambda: self.add_to_order("Hashbrown", 2.20)))
         self.add_btn5.place(x=1670, y=762)
 
     def specials(self):
@@ -813,12 +815,12 @@ class Menu:
                                           font=("arial", 9), bg="#153c7d", fg="white"))
         self.pita_desc.place(x=393, y=698)
 
-        self.price_label = self.track(Label(parent, text="$8.25", font=("arial", 12, "bold"), bg="#153c7d", fg="white"))
+        self.price_label = self.track(Label(parent, text="$8.50", font=("arial", 12, "bold"), bg="#153c7d", fg="white"))
         self.price_label.place(x=375, y=765)
 
         self.add_btn = self.track(customtkinter.CTkButton(parent, text="Add +", width=80, height=28, fg_color="#cc3628",
                                                           hover_color="#a02010", bg_color="#153c7d", corner_radius=10,
-                                                          command=lambda: self.add_to_order("Premium Pie - Butter Chicken", 8.25)))
+                                                          command=lambda: self.add_to_order("Premium Pie - Butter Chicken", 8.50)))
         self.add_btn.place(x=470, y=762)
 
         # --- Card 2 ---
@@ -852,13 +854,13 @@ class Menu:
         self.card2_desc.place(x=700, y=698)
 
         self.price_label2 = self.track(
-            Label(parent, text="$8.25", font=("arial", 12, "bold"), bg="#153c7d", fg="white"))
+            Label(parent, text="$8.50", font=("arial", 12, "bold"), bg="#153c7d", fg="white"))
         self.price_label2.place(x=675, y=765)
 
         self.add_btn2 = self.track(
             customtkinter.CTkButton(parent, text="Add +", width=80, height=28, fg_color="#cc3628",
                                     hover_color="#a02010", bg_color="#153c7d", corner_radius=10,
-                                    command=lambda: self.add_to_order("Premium Pie - Mince&Cheese", 8.25)))
+                                    command=lambda: self.add_to_order("Premium Pie - Mince&Cheese", 8.50)))
         self.add_btn2.place(x=770, y=762)
 
         # --- Card 3 ---
@@ -888,12 +890,12 @@ class Menu:
             font=("arial", 9), bg="#153c7d", fg="white"))
         self.card3_desc.place(x=985, y=698)
 
-        self.price_label3 = self.track(Label(parent, text="$8.25", font=("arial", 12, "bold"), bg="#153c7d", fg="white"))
+        self.price_label3 = self.track(Label(parent, text="$8.50", font=("arial", 12, "bold"), bg="#153c7d", fg="white"))
         self.price_label3.place(x=975, y=765)
 
         self.add_btn3 = self.track(customtkinter.CTkButton(parent, text="Add +", width=80, height=28, fg_color="#cc3628",
             hover_color="#a02010", bg_color="#153c7d", corner_radius=10,
-            command=lambda: self.add_to_order("Premium Pie - Steak&Cheese", 8.25)))
+            command=lambda: self.add_to_order("Premium Pie - Steak&Cheese", 8.50)))
         self.add_btn3.place(x=1070, y=762)
 
 
