@@ -47,7 +47,7 @@ class Menu:
         self.text.place(x=870, y=500)
 
         self.text2 = Label(root, font=("arial", 20), bg="#cc3628",
-                           text="Mount Roskill Grammar was founded 1953 and began with a roll of 363 students, \n that intial started as a part of an auckland rugby union")
+                           text="Mount Roskill Grammar was founded 1953 and began with a roll of 363 students, \n that intial started as a part of an auckland rugby union.")
         self.text2.place(x=600, y=560)
 
         self.button = PhotoImage(file='button_menu (1).png')
@@ -76,9 +76,9 @@ class Menu:
         self.img5.place(x=61, y=750)
 
         self.img_order = customtkinter.CTkButton(root, fg_color="black", text="Order", font=("Canva Sans", 16, "bold"),command=self.toggle_sidebar,
-                                                 corner_radius=100, height=60, width=20,
+                                                 corner_radius=100, height=60, width=30,
                                                  border_width=3, bg_color="#153c7d")
-        self.img_order.place(x=1070, y=0)
+        self.img_order.place(x=10, y=0)
 
         self.sidebar = Frame(root, bg="#153c7d", width=300)
         self.sidebar_visible = False
