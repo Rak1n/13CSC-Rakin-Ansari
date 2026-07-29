@@ -839,7 +839,7 @@ if __name__ == "__main__":
     root.geometry("1920x1080")
     root.minsize(10, 10)
     root.maxsize(1920, 1080)
-    root.title("General Knowledge Quiz")
+    root.title("MRGS Tuck Shop")
     root.configure(bg="#800517")
     Menu_object = Menu(root)
 
