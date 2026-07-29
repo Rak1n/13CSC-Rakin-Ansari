@@ -364,14 +364,14 @@ class Menu:
         self.food_load.place(x=410, y=560)
         self.food_load.lift()
 
-        self.pita_name = self.track(
+        self.main_name = self.track(
             Label(parent, text="Sloppy Jo", font=("arial", 11, "bold"), bg="#153c7d", fg="white"))
-        self.pita_name.place(x=434, y=675)
+        self.main_name.place(x=434, y=675)
 
-        self.pita_desc = self.track(Label(parent,
+        self.main_desc = self.track(Label(parent,
                                           text="Savory beef mince in a soft burger\n bun, topped with a melty cheese \nslice and smoky BBQ sauce.",
                                           font=("arial", 9), bg="#153c7d", fg="white"))
-        self.pita_desc.place(x=380, y=700)
+        self.main_desc.place(x=380, y=700)
 
         self.price_label = self.track(Label(parent, text="$7.70", font=("arial", 12, "bold"), bg="#153c7d", fg="white"))
         self.price_label.place(x=375, y=765)
@@ -563,12 +563,12 @@ class Menu:
 
 
 
-        self.pita_name = self.track(Label(parent, text="Pretzel - Sweet", font=("arial", 11, "bold"), bg="#153c7d", fg="white"))
-        self.pita_name.place(x=415, y=675)
+        self.sides_name = self.track(Label(parent, text="Pretzel - Sweet", font=("arial", 11, "bold"), bg="#153c7d", fg="white"))
+        self.sides_name.place(x=415, y=675)
 
-        self.pita_desc = self.track(Label(parent, text="Pretzel coated in sweet\n glaze and dusted with \nwarm cinnamon sugar.",
+        self.sides_desc = self.track(Label(parent, text="Pretzel coated in sweet\n glaze and dusted with \nwarm cinnamon sugar.",
             font=("arial", 9), bg="#153c7d", fg="white"))
-        self.pita_desc.place(x=410, y=698)
+        self.sides_desc.place(x=410, y=698)
 
         self.price_label = self.track(Label(parent, text="$5.50", font=("arial", 12, "bold"), bg="#153c7d", fg="white"))
         self.price_label.place(x=375, y=765)
@@ -739,14 +739,14 @@ class Menu:
         self.food_load.place(x=410, y=560)
         self.food_load.lift()
 
-        self.pita_name = self.track(
+        self.specials_name = self.track(
             Label(parent, text="Premium Pie - Butter Chicken", font=("arial", 11, "bold"), bg="#153c7d", fg="white"))
-        self.pita_name.place(x=370, y=675)
+        self.specials_name.place(x=370, y=675)
 
-        self.pita_desc = self.track(Label(parent,
+        self.specials_desc = self.track(Label(parent,
                                           text="Flaky pastry filled \nwith tender chicken in \na creamy, spiced butter sauce.",
                                           font=("arial", 9), bg="#153c7d", fg="white"))
-        self.pita_desc.place(x=393, y=698)
+        self.specials_desc.place(x=393, y=698)
 
         self.price_label = self.track(Label(parent, text="$8.50", font=("arial", 12, "bold"), bg="#153c7d", fg="white"))
         self.price_label.place(x=375, y=765)
