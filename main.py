@@ -193,9 +193,9 @@ class Menu:
            hover_color="#a02010", corner_radius=10,
            command=self.place_order
        ).pack(pady=10)
-
        customtkinter.CTkButton(self.sidebar, text="Clear  Order", fg_color="#cc3628", hover_color="#a02010",
                                corner_radius=10, command=self.clear_order).pack(pady=5)
+
 
        customtkinter.CTkButton(
            self.sidebar, text="✕ Close", fg_color="#333333",
