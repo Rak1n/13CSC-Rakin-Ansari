@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="dc1909a9-29f6-4ce4-a55a-f813f63d8ddb" name="Changes" comment="final 6">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
+=======
+    <list default="true" id="dc1909a9-29f6-4ce4-a55a-f813f63d8ddb" name="Changes" comment="final 1" />
+>>>>>>> parent of 78cb70b (final 6)
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -343,7 +347,11 @@
     <MESSAGE value="adding more option p2" />
     <MESSAGE value="final" />
     <MESSAGE value="final 1" />
+<<<<<<< HEAD
     <MESSAGE value="final 6" />
     <option name="LAST_COMMIT_MESSAGE" value="final 6" />
+=======
+    <option name="LAST_COMMIT_MESSAGE" value="final 1" />
+>>>>>>> parent of 78cb70b (final 6)
   </component>
 </project>
