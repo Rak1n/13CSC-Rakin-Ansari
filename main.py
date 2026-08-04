@@ -115,6 +115,7 @@ class Menu:
 
         Label(self.sidebar, text="Your Order", font=("arial", 16, "bold"),bg="#153c7d", fg="white").pack(pady=10)
 
+
         total = 0
         for name, price in self.order_items:
             Label(self.sidebar, text=f"{name}  ${price:.2f}",font=("arial", 12), bg="#153c7d", fg="white").pack(pady=2)
